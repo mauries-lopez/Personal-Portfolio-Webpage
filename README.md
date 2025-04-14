@@ -21,3 +21,4 @@ Details
 
 ## Tutorials
 - [Whole Website](https://www.youtube.com/watch?v=LGdPMf-SgBA)
+- [My Inspiration Website](https://www.uncensoredlibrary.com/en)

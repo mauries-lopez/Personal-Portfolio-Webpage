@@ -6,7 +6,6 @@ html, body {
   font-family: "Space Grotesk", sans-serif;
   background: white;
   color: black;
-  overflow: hidden;
   caret-color: transparent;
 }
 
@@ -21,7 +20,7 @@ html, body {
     }
   }
 
-  .animate-loading-bar{
+.animate-loading-bar{
     animation: loading 0.8s ease infinite;
   }
 }
