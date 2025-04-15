@@ -9,6 +9,10 @@ html, body {
   caret-color: transparent;
 }
 
+@theme {
+  --breakpoint-3xs: 1rem;
+}
+
 @layer utilities{
   @keyframes loading{
     0% {
@@ -22,5 +26,67 @@ html, body {
 
 .animate-loading-bar{
     animation: loading 0.8s ease infinite;
+  }
+}
+
+@layer utilities{
+  @keyframes slideOut{
+    0%{
+      transform: translateX(-100%);
+    }
+
+    100%{
+      transform: translateX(0%);
+    }
+  }
+  
+  @keyframes slideIn{
+    0%{
+      transform: translateX(0%);
+    }
+
+    100%{
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-div-slide-in{
+    animation: slideIn 0.8s ease-in-out forwards;
+  }
+
+  .animate-div-slide-out{
+    animation: slideOut 0.8s ease-in-out forwards;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 0.5;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 0.5;
+      width: 50%;
+    }
+    100% {
+      opacity: 0;
+      width: 100%;
+    }
+  }
+
+  .animate-blurryDiv-fade-in {
+    animation: fadeIn 0.8s ease-in-out forwards;
+  }
+
+  .animate-blurryDiv-fade-out {
+    animation: fadeOut 0.3s ease-in-out forwards;
   }
 }
