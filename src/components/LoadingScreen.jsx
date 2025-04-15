@@ -22,7 +22,7 @@ export const LoadingScreen = ({onComplete}) => {
     }, [onComplete]);
 
     return (
-        <div className="fixed inset-0 z-50 white black flex flex-col items-center justify-center">
+        <div className="fixed inset-0 z-50 white black flex flex-col items-center justify-center" style={{backgroundImage: "url(/mainMenuBG.png"}}>
             <div className = "mb-4 text-4xl font-mono font-bold">
                 <span className="animate-blink ml-1"> {text} </span>
             </div>

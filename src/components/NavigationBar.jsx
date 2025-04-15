@@ -1,13 +1,18 @@
 import socialMediaLogo from '../assets/socialMediaLogo.svg'
 
-export const NavigationBar = ({ curHamburgerStatus, setCurHamburgerStatus}) => {
+export const NavigationBar = ({ curHamburgerStatus, setCurHamburgerStatus, overflowStatus, setOverflowStatus}) => {
     
     function handleHamburgerClick(){
         setCurHamburgerStatus(true);
+        // Enable Scrolling
+        if ( overflowStatus == true ){
+            setOverflowStatus(false);
+            document.body.style.overflow = "hidden";
+        }
     }
     
     return (
-        <nav className="sticky top-0 z-40 w-dvw h-[6rem] background-color: bg-black opacity-90 flex flex-row items-center">
+        <nav className="fixed top-0 z-40 w-dvw h-[6rem] background-color: bg-black opacity-90 flex flex-row items-center">
             <div className="relative h-full w-xs flex flex-row space-x-1.5 justify-center items-center" id="hamburgerPartition" >
                 <div className="transform transition-transform duration-200 hover:scale-125 flex flex-row space-x-1.5 cursor-pointer" id="hamburgerBtn" onClick={handleHamburgerClick}>
                     <div className="w-[0.3rem] h-[2rem] bg-white duration-300"></div>
