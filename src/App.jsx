@@ -24,7 +24,7 @@ function App() {
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       }
   
-      {isLoaded && 
+      {
         <NavigationBar 
           setCurHamburgerStatus={setCurHamburgerStatus}
           overflowStatus={overflowStatus}
@@ -41,37 +41,37 @@ function App() {
         />
       }
       
-      {isLoaded &&
+      {
         <About
           setNavTitle = {setNavTitle}
         />
       }
     
-      {isLoaded &&
+      {
         <Projects
           setNavTitle = {setNavTitle}
         />
       }
 
-      {isLoaded &&
+      {
         <TechStack
           setNavTitle = {setNavTitle}
         />
       }
 
-      {isLoaded &&
+      {
         <Education
           setNavTitle = {setNavTitle}
         />
       }
 
-      {isLoaded &&
+      {
         <Experience
           setNavTitle = {setNavTitle}
         />
       }
 
-      {isLoaded &&
+      {
         <Contact
           setNavTitle = {setNavTitle}
         />

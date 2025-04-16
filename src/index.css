@@ -38,3 +38,51 @@ body{
     animation: loading 0.8s ease infinite;
   }
 }
+
+@layer utilities{
+  @keyframes swipe{
+    0%{
+      transform: translateY(0%);
+    }
+    100%{
+      transform: translateY(-100%);
+    }
+  }
+
+  .animate-swipe{
+    animation: swipe 1.05s ease-out;
+  }
+}
+
+@layer utilities {
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn-effect {
+    animation: fadeIn 3.5s forwards;
+  }
+}
+
+@layer utilities {
+  @keyframes pop {
+    0% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .animate-pop {
+    animation: pop 3.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  }
+}
