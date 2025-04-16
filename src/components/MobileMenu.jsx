@@ -25,7 +25,7 @@ export const MobileMenu = ({curHamburgerStatus, setCurHamburgerStatus, overflowS
 
     return (
         <div className="fixed top-0 left-0 z-50 h-dvh w-dvw flex flex-row">
-            <div id="mainMenu" className={`relative h-dvh z-20 3xs:w-[100%] md:w-[50%] bg-white text-black flex flex-col ${animateClass} bg-no-repeat bg-cover bg-center`} style={{backgroundImage: "url(/mainMenuBG.png"}}>
+            <div id="mainMenu" className={`relative h-dvh z-20 3xs:w-[100%] md:w-[50%] bg-white text-black/95 flex flex-col ${animateClass} bg-no-repeat bg-cover bg-center`} style={{backgroundImage: "url(/mainMenuBG.png"}}>
                 <div id="upperPortion" className="relative h-[20%] w-full flex flex-row justify-start items-center transform transition-transform duration-500 ease-in-out translate-x-0">
                     <div className="relative left-[4rem] transform transition-transform duration-200 hover:scale-125 flex flex-row space-x-1.5 cursor-pointer" id="hamburgerBtn" onClick={handleHamburgerClick}>
                         <span className="text-5xl"> X </span>
@@ -64,7 +64,7 @@ export const MobileMenu = ({curHamburgerStatus, setCurHamburgerStatus, overflowS
 
                 </div>
             </div>
-            <div id="blurrySide" className={`hidden fixed z-10 md:block h-dvh bg-black opacity-50 md:w-[100%] ${animateBlurryDivClass}`}>
+            <div id="blurrySide" className={`hidden fixed z-10 md:block h-dvh bg-black/100 md:w-[100%] ${animateBlurryDivClass}`}>
 
             </div>
         </div>

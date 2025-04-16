@@ -1,8 +1,20 @@
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
-export const Contact = () => {
+export const Contact = ({setNavTitle}) => {
+
+    const { ref, inView } = useInView({
+        threshold: 0.9,
+    });
+
+    useEffect(() => {
+        if (inView) {
+            setNavTitle("Contacts");
+        }
+    }, [inView, setNavTitle]);
 
     return (
-        <section id="contact" className="relative h-dvh w-dvw top-0 bg-amber-950 flex justify-center items-center">
+        <section id="contact" ref={ref} className="relative h-dvh w-dvw top-0 bg-amber-950 flex justify-center items-center">
 
         </section>   
     );

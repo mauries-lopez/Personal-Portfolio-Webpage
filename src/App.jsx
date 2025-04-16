@@ -16,6 +16,7 @@ function App() {
   const [ isLoaded, setIsLoaded ] = useState(false)
   const [ curHamburgerStatus, setCurHamburgerStatus ] = useState(false);
   const [ overflowStatus, setOverflowStatus] = useState(true); // True = With Scrolling; False = No Scrolling
+  const [ navTitle, setNavTitle ] = useState("Section Title");
 
   return (
     <div className="relative w-full h-dvh">
@@ -28,6 +29,7 @@ function App() {
           setCurHamburgerStatus={setCurHamburgerStatus}
           overflowStatus={overflowStatus}
           setOverflowStatus={setOverflowStatus}
+          navTitle = {navTitle}
         />
       }
   
@@ -40,27 +42,39 @@ function App() {
       }
       
       {isLoaded &&
-        <About/>
+        <About
+          setNavTitle = {setNavTitle}
+        />
       }
     
       {isLoaded &&
-        <Projects/>
+        <Projects
+          setNavTitle = {setNavTitle}
+        />
       }
 
       {isLoaded &&
-        <TechStack/>
+        <TechStack
+          setNavTitle = {setNavTitle}
+        />
       }
 
       {isLoaded &&
-        <Education/>
+        <Education
+          setNavTitle = {setNavTitle}
+        />
       }
 
       {isLoaded &&
-        <Experience/>
+        <Experience
+          setNavTitle = {setNavTitle}
+        />
       }
 
       {isLoaded &&
-        <Contact/>
+        <Contact
+          setNavTitle = {setNavTitle}
+        />
       }    
       
     </div>
