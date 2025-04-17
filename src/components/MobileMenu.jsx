@@ -38,7 +38,7 @@ export const MobileMenu = ({curHamburgerStatus, setCurHamburgerStatus, overflowS
                                 <li className="hover:underline cursor-pointer"> About Me </li>
                             </Link>
 
-                            <Link to="experience" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
+                            <Link to="experience" spy={true} smooth={true} offset={-85} duration={500} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Experience </li>
                             </Link>
 

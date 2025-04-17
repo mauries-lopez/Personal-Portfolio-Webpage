@@ -16,17 +16,32 @@ export const About = ( {setNavTitle} ) => {
     const [educationDivName, setdEudcationDivName] = useState("+ Education");
     const [educationDivBtnDisplay, setEducationDivBtnDisplay] = useState("block");
     const [educationDisplay, setEducationDisplay] = useState("hidden");
-    
+
+    // Background Animation
+    const [animateBGClass, setAnimateBGClass] = useState("");
+    const [bgScale, setBgScale] = useState("scale-100")
 
     const { ref, inView } = useInView({
-        threshold: 0.9,
+        threshold: 0.1,
     });
 
     useEffect(() => {
         if (inView) {
             setNavTitle("01 About Me");
-        };
+    
+            setAnimateBGClass("");
+            setBgScale("scale-[1.2]");
+    
+            setTimeout(() => {
+                setAnimateBGClass("animate-scaleIn-bg");
+                setBgScale("");
+            }, 30);
+        } else {
+            setAnimateBGClass("");
+            setBgScale("scale-[1.2]");
+        }
     }, [inView, setNavTitle]);
+    
 
     function introductionClick(){
         if ( introductionDisplay == "hidden" ){
@@ -86,9 +101,13 @@ export const About = ( {setNavTitle} ) => {
 
     return (
         <section id="about" ref={ref} className="relative h-full w-full top-0 flex flex-col justify-center items-center bg-black/95" >
-            <div className="absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-sm z-0" style={{ backgroundImage: "url(/aboutMeBG.png)" }}></div>
-            <div className="relative h-[70%] w-[80%] flex md:flex-row 3xs:flex-col-reverse justify-center items-center">
-                <div className="relative w-full md:pt-0  flex flex-col justify-center items-center animate-pop bg-black/60 rounded-2xl">
+            <div className={`absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-xs z-0 ${bgScale} ${animateBGClass}`} style={{ backgroundImage: "url(/aboutMeBG.png)" }}></div>
+            <div className="relative h-[70%] sm:w-[50%] 3xs:w-[80%] flex flex-col justify-center items-center ">
+                <div id="imageDiv" className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] flex flex-col 3xs:pb-5 justify-center items-center bg-fixed">
+                    <div className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] bg-no-repeat bg-cover bg-bottom mask-radial-from-99% mask-radial-[40%_50%] " style={{backgroundImage: "url(/profilePictureWbg.jpg"}}>
+                    </div>
+                </div>
+                <div className="relative w-full md:pt-0  flex flex-col justify-center items-center  bg-black/60 rounded-2xl">
                     <div id="nameDiv" className="relative md:p-5 3xs:p-2 text-white md:text-5xl 3xs:text-4xl font-bold font-sans text-center break-words flex justify-center items-center">
                         Mauries Lopez
                     </div>
@@ -149,13 +168,9 @@ export const About = ( {setNavTitle} ) => {
                         </div>
                     </div>
                 </div>
-                <div id="imageDiv" className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] flex flex-col 3xs:pb-5 justify-center items-center bg-fixed ">
-                    <div className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] bg-no-repeat bg-cover bg-bottom mask-radial-from-99% mask-radial-[40%_50%] animate-pop" style={{backgroundImage: "url(/profilePictureWbg.jpg"}}>
-                    </div>
-                </div>
             </div>
             <div id="arrowDownDiv" className="absolute bottom-4 left-1/2 transform -translate-x-1/2 z-20 h-[10%] w-[10%] flex justify-center items-center">
-                <Link to="education" spy={true} smooth={true} offset={0} duration={500}>
+                <Link to="experience" spy={true} smooth={true} offset={-64} duration={500}>
                     <div className="-lg flex size-12 animate-bounce items-center justify-center rounded-full bg-black p-2 ring-1 ring-gray-900/100 dark:bg-black/30 dark:ring-black/100 cursor-pointer">
                         <svg className="size-12 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
