@@ -74,7 +74,7 @@ body{
       transform: scale(0);
     }
     50% {
-      transform: scale(1.15);
+      transform: scale(1.05);
     }
     100% {
       transform: scale(1);
