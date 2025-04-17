@@ -61,12 +61,6 @@ function App() {
       }
 
       {
-        <Education
-          setNavTitle = {setNavTitle}
-        />
-      }
-
-      {
         <Experience
           setNavTitle = {setNavTitle}
         />
