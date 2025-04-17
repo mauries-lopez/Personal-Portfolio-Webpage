@@ -9,7 +9,7 @@ export const Experience = ({setNavTitle}) => {
 
     useEffect(() => {
         if (inView) {
-            setNavTitle("Experience");
+            setNavTitle("05 Experience");
         }
     }, [inView, setNavTitle]);
     

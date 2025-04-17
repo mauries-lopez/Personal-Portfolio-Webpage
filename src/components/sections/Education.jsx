@@ -9,7 +9,7 @@ export const Education = ({setNavTitle}) => {
 
     useEffect(() => {
         if (inView) {
-            setNavTitle("Education");
+            setNavTitle("04 Education");
         }
     }, [inView, setNavTitle]);
 

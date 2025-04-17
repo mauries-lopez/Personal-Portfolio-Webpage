@@ -1,6 +1,6 @@
 import './App.css'
 import "./index.css"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { LoadingScreen } from './components/LoadingScreen';
 import { NavigationBar } from './components/NavigationBar';
 import { MobileMenu } from './components/MobileMenu';
@@ -10,6 +10,7 @@ import { TechStack } from './components/sections/TechStack';
 import { Education } from './components/sections/Education';
 import { Experience } from './components/sections/Experience';
 import { Contact } from './components/sections/Contact';
+import Lenis from 'lenis'
 
 function App() {
 
@@ -18,6 +19,19 @@ function App() {
   const [ overflowStatus, setOverflowStatus] = useState(true); // True = With Scrolling; False = No Scrolling
   const [ navTitle, setNavTitle ] = useState("Section Title");
 
+  useEffect( () => {
+    // Initialize Lenis
+    const lenis = new Lenis();
+
+    // Use requestAnimationFrame to continuously update the scroll
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, [])
+  
   return (
     <div className="relative w-full h-dvh">
       {!isLoaded && 
