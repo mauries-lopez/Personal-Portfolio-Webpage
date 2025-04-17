@@ -7,7 +7,6 @@ import { MobileMenu } from './components/MobileMenu';
 import { About } from './components/sections/About';
 import { Projects } from './components/sections/Projects';
 import { TechStack } from './components/sections/TechStack';
-import { Education } from './components/sections/Education';
 import { Experience } from './components/sections/Experience';
 import { Contact } from './components/sections/Contact';
 import Lenis from 'lenis'
