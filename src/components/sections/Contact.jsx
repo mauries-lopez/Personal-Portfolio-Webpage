@@ -9,7 +9,7 @@ export const Contact = ({setNavTitle}) => {
 
     useEffect(() => {
         if (inView) {
-            setNavTitle("06 Contacts");
+            setNavTitle("05 Contacts");
         }
     }, [inView, setNavTitle]);
 

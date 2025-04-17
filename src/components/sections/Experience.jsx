@@ -9,13 +9,13 @@ export const Experience = ({setNavTitle}) => {
 
     useEffect(() => {
         if (inView) {
-            setNavTitle("05 Experience");
+            setNavTitle("02 Experience");
         }
     }, [inView, setNavTitle]);
     
     return (
         <section id="experience" ref={ref} className="relative h-dvh w-dvw top-0 bg-gray-700 flex justify-center items-center">
-
+            
         </section>   
     );
 }

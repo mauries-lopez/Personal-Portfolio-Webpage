@@ -9,7 +9,7 @@ export const TechStack= ({setNavTitle}) => {
 
     useEffect(() => {
         if (inView) {
-            setNavTitle("03 Tech Stack");
+            setNavTitle("04 Tech Stack");
         }
     }, [inView, setNavTitle]);
 

@@ -38,20 +38,16 @@ export const MobileMenu = ({curHamburgerStatus, setCurHamburgerStatus, overflowS
                                 <li className="hover:underline cursor-pointer"> About Me </li>
                             </Link>
 
+                            <Link to="experience" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
+                                <li className="hover:underline cursor-pointer"> Experience </li>
+                            </Link>
+
                             <Link to="projects" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Projects </li>
                             </Link>
 
                             <Link to="tech-stack" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Tech Stack </li>
-                            </Link>
-
-                            <Link to="education" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
-                                <li className="hover:underline cursor-pointer"> Education </li>
-                            </Link>
-
-                            <Link to="experience" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
-                                <li className="hover:underline cursor-pointer"> Experience </li>
                             </Link>
 
                             <Link to="contact" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>

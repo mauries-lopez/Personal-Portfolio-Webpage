@@ -31,7 +31,7 @@ function App() {
 
     requestAnimationFrame(raf);
   }, [])
-  
+
   return (
     <div className="relative w-full h-dvh">
       {!isLoaded && 
@@ -60,18 +60,6 @@ function App() {
           setNavTitle = {setNavTitle}
         />
       }
-    
-      {
-        <Projects
-          setNavTitle = {setNavTitle}
-        />
-      }
-
-      {
-        <TechStack
-          setNavTitle = {setNavTitle}
-        />
-      }
 
       {
         <Education
@@ -81,6 +69,18 @@ function App() {
 
       {
         <Experience
+          setNavTitle = {setNavTitle}
+        />
+      }
+    
+      {
+        <Projects
+          setNavTitle = {setNavTitle}
+        />
+      }
+
+      {
+        <TechStack
           setNavTitle = {setNavTitle}
         />
       }
