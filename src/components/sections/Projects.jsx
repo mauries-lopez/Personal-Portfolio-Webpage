@@ -16,7 +16,7 @@ export const Projects = ({setNavTitle}) => {
     return (
         <section id="projects" ref={ref} className="relative h-dvh w-dvw top-0 bg-yellow-300 flex justify-center items-center">
             <div className="h-[70%] w-[70%] bg-yellow-500 ">
-
+                
             </div>
         </section>   
     );

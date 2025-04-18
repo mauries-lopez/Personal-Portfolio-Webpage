@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
 
-export const About = ( {setNavTitle} ) => {
+export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor} ) => {
 
     const [introductionDivName, setIntroductionDivName] = useState("+ Introduction");
     const [introductionDivBtnDisplay, setIntroductionDivBtnDisplay] = useState("block");
@@ -16,29 +16,22 @@ export const About = ( {setNavTitle} ) => {
     const [educationDivName, setdEudcationDivName] = useState("+ Education");
     const [educationDivBtnDisplay, setEducationDivBtnDisplay] = useState("block");
     const [educationDisplay, setEducationDisplay] = useState("hidden");
-
-    // Background Animation
-    const [animateBGClass, setAnimateBGClass] = useState("");
-    const [bgScale, setBgScale] = useState("scale-100")
-
     const { ref, inView } = useInView({
-        threshold: 0.1,
+        threshold: 0.9,
     });
 
     useEffect(() => {
         if (inView) {
+            // Recolor (default)
+            setNavTitleColor("text-white");
+            setNavBarColor("#1A1A1A");
+            setNavMainMenuBtnColor("bg-white");
+            setNavSocialColor("");
+
             setNavTitle("01 About Me");
-    
-            setAnimateBGClass("");
-            setBgScale("scale-[1.2]");
-    
             setTimeout(() => {
-                setAnimateBGClass("animate-scaleIn-bg");
-                setBgScale("");
+                setAnimateAboutBGClass("animate-scaleIn-bg");
             }, 30);
-        } else {
-            setAnimateBGClass("");
-            setBgScale("scale-[1.2]");
         }
     }, [inView, setNavTitle]);
     
@@ -100,8 +93,8 @@ export const About = ( {setNavTitle} ) => {
     };
 
     return (
-        <section id="about" ref={ref} className="relative h-full w-full top-0 flex flex-col justify-center items-center bg-black/95" >
-            <div className={`absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-xs z-0 ${bgScale} ${animateBGClass}`} style={{ backgroundImage: "url(/aboutMeBG.png)" }}></div>
+        <section id="about" ref={ref} className="relative h-full w-full top-0 flex flex-col justify-center items-center bg-black/95 overflow-hidden" >
+            <div className={`absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-xs z-0 scale-[1.1] ${animateAboutBGClass}`} style={{ backgroundImage: "url(/aboutMeBG.png)" }}></div>
             <div className="relative h-[70%] sm:w-[50%] 3xs:w-[80%] flex flex-col justify-center items-center ">
                 <div id="imageDiv" className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] flex flex-col 3xs:pb-5 justify-center items-center bg-fixed">
                     <div className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] bg-no-repeat bg-cover bg-bottom mask-radial-from-99% mask-radial-[40%_50%] " style={{backgroundImage: "url(/profilePictureWbg.jpg"}}>

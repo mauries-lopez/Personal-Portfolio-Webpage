@@ -16,7 +16,15 @@ function App() {
   const [ isLoaded, setIsLoaded ] = useState(false)
   const [ curHamburgerStatus, setCurHamburgerStatus ] = useState(false);
   const [ overflowStatus, setOverflowStatus] = useState(true); // True = With Scrolling; False = No Scrolling
+
   const [ navTitle, setNavTitle ] = useState("Section Title");
+  const [ navTitleColor, setNavTitleColor] = useState("text-white")
+  const [ navBarColor, setNavBarColor] = useState("#1A1A1A");
+  const [ navMainMenuBtnColor, setNavMainMenuBtnColor] = useState("bg-white");
+  const [ navSocialColor, setNavSocialColor] = useState(""); // mix-blend-darken = #1A1A1A
+
+  // Background Animation
+  const [animateAboutBGClass, setAnimateAboutBGClass] = useState("");
 
   useEffect( () => {
     // Initialize Lenis
@@ -43,6 +51,10 @@ function App() {
           overflowStatus={overflowStatus}
           setOverflowStatus={setOverflowStatus}
           navTitle = {navTitle}
+          navTitleColor = {navTitleColor}
+          navBarColor = {navBarColor}
+          navMainMenuBtnColor = {navMainMenuBtnColor}
+          navSocialColor = {navSocialColor}
         />
       }
   
@@ -57,12 +69,23 @@ function App() {
       {
         <About
           setNavTitle = {setNavTitle}
+          animateAboutBGClass = {animateAboutBGClass}
+          setAnimateAboutBGClass = {setAnimateAboutBGClass}
+          setNavTitleColor = {setNavTitleColor}
+          setNavBarColor = {setNavBarColor}
+          setNavMainMenuBtnColor = {setNavMainMenuBtnColor}
+          setNavSocialColor = {setNavSocialColor}
         />
       }
 
       {
         <Experience
           setNavTitle = {setNavTitle}
+          setAnimateAboutBGClass = {setAnimateAboutBGClass}
+          setNavTitleColor = {setNavTitleColor}
+          setNavBarColor = {setNavBarColor}
+          setNavMainMenuBtnColor = {setNavMainMenuBtnColor}
+          setNavSocialColor = {setNavSocialColor}
         />
       }
     
