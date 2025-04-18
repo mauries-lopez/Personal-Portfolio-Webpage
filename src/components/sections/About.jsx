@@ -93,7 +93,7 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
     };
 
     return (
-        <section id="about" ref={ref} className="relative h-full w-full top-0 flex flex-col justify-center items-center bg-black/95 overflow-hidden" >
+        <section id="about" ref={ref} className="relative h-svh w-full top-0 flex flex-col justify-center items-center bg-black/95 overflow-hidden" >
             <div className={`absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-xs z-0 scale-[1.1] ${animateAboutBGClass}`} style={{ backgroundImage: "url(/aboutMeBG.png)" }}>
             <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(0,0,0,1), transparent)", pointerEvents: "none"}}/></div>
             <div className="relative h-[70%] sm:w-[50%] 3xs:w-[80%] flex flex-col justify-center items-center ">
@@ -105,7 +105,7 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
                     <div id="nameDiv" className="relative md:p-5 3xs:p-2 text-white md:text-5xl 3xs:text-4xl font-bold font-sans text-center break-words flex justify-center items-center">
                         Mauries Lopez
                     </div>
-                    <div className="relative w-full flex flex-col justify-start md:overflow-hidden 3xs:overflow-y-scroll rounded-2xl space-y-0.5"> 
+                    <div className="relative w-full flex flex-col justify-start md:overflow-hidden rounded-2xl space-y-0.5"> 
                         <div id="subNameDiv" className={`relative ${introductionDivBtnDisplay} bg-white text-black md:text-2xl 3xs:text-xl italic font-bold font-sans text-start break-words p-3 cursor-pointer hover:bg-white/80`} onClick={introductionClick}>
                             {introductionDivName}
                         </div>
@@ -165,7 +165,7 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
             </div>
             <div id="arrowDownDiv" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 h-[10%] w-[10%] flex justify-center items-center">
                 <Link to="experience" spy={true} smooth={true} offset={-64} duration={500}>
-                    <div className="flex size-12 md:animate-bounce 3xs:animate-pulse 3xs:mb-4 items-center justify-center rounded-full md:bg-black p-2 ring-1 md:ring-gray-900/100 md:dark:bg-white/30 md:dark:ring-white/100 cursor-pointer">
+                    <div className="flex md:size-12 3xs:size-14 sm:animate-bounce 3xs:animate-pulse 3xs:mb-5 items-center justify-center rounded-full md:bg-black p-2 ring-1 md:ring-gray-900/100 dark:bg-white/30 dark:ring-white/100 cursor-pointer">
                         <svg className="size-12 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                         </svg>

@@ -14,7 +14,7 @@ export const Contact = ({setNavTitle}) => {
     }, [inView, setNavTitle]);
 
     return (
-        <section id="contact" ref={ref} className="relative h-dvh w-dvw top-0 bg-amber-950 flex justify-center items-center">
+        <section id="contact" ref={ref} className="relative h-svh w-dvw top-0 bg-amber-950 flex justify-center items-center">
 
         </section>   
     );

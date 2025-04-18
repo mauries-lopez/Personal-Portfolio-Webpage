@@ -34,23 +34,23 @@ export const MobileMenu = ({curHamburgerStatus, setCurHamburgerStatus, overflowS
                 <div id="middlePortion" className="relative h-[60%] w-full flex justify-center items-start">
                     <div>
                         <ul className="list-inside list-[upper-roman] text-3xl/17 font-bold">
-                            <Link to="about" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
+                            <Link to="about" spy={true} smooth={true} offset={0} duration={800} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> About Me </li>
                             </Link>
 
-                            <Link to="experience" spy={true} smooth={true} offset={-85} duration={500} onClick={() => {handleHamburgerClick()}}>
+                            <Link to="experience" spy={true} smooth={true} offset={-65} duration={800} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Experience </li>
                             </Link>
 
-                            <Link to="projects" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
+                            <Link to="projects" spy={true} smooth={true} offset={0} duration={800} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Projects </li>
                             </Link>
 
-                            <Link to="tech-stack" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
+                            <Link to="tech-stack" spy={true} smooth={true} offset={0} duration={800} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Tech Stack </li>
                             </Link>
 
-                            <Link to="contact" spy={true} smooth={true} offset={0} duration={500} onClick={() => {handleHamburgerClick()}}>
+                            <Link to="contact" spy={true} smooth={true} offset={0} duration={800} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Contact </li>
                             </Link>
                         </ul>
