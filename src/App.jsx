@@ -40,7 +40,7 @@ function App() {
   }, [])
 
   return (
-    <div className="relative w-full h-dvh">
+    <div className="w-full h-dvh relative">
       {!isLoaded && 
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       }

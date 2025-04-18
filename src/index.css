@@ -18,6 +18,21 @@ body{
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 768px) {
+  html {
+    background-color: red;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  body {
+    height: 100%;
+    position: fixed;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 @theme {
   --breakpoint-3xs: 1rem;
 }
@@ -43,10 +58,12 @@ body{
 
   .animate-scaleIn-bg{
     animation: scaleIn 3s ease-in-out forwards;
+    background-attachment: fixed;
   }
 
   .animate-scaleOut-bg{
     animation: scaleOut 0.5s ease-in-out forwards;
+    background-attachment: fixed;
   }
 }
 

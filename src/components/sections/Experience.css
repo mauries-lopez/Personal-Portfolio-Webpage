@@ -26,10 +26,10 @@
       }
     
       .animate-block-slide-in{
-        animation: slideIn 2s ease-in-out forwards;
+        animation: slideIn 1.5s ease-in-out forwards;
       }
     
       .animate-block-slide-out{
-        animation: slideOut 0.6s ease-in-out forwards;
+        animation: slideOut 1.6s ease-in-out forwards;
       }    
 }
