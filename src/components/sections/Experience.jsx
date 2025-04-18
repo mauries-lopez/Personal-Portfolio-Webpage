@@ -5,7 +5,7 @@ import './Experience.css'
 
 export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor}) => {
     // Refs for section
-    const { ref: sectionRef, inView: sectionInView } = useInView({ threshold: 0.9 });
+    const { ref: sectionRef, inView: sectionInView } = useInView({ threshold: 0.85 });
 
     // Individual refs for each block
     const {ref: block0Ref, inView: block0InView} = useInView({ threshold: 0.5});
