@@ -69,15 +69,15 @@ body{
 @layer utilities{
   @keyframes swipe{
     0%{
-      transform: translateY(0%);
+      clip-path: circle(90%);
     }
     100%{
-      transform: translateY(-100%);
+      clip-path: circle(0%);
     }
   }
 
   .animate-swipe{
-    animation: swipe 1.05s ease-out;
+    animation: swipe 1s cubic-bezier(0.25,0.1,0.25,1);
   }
 }
 

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 
-export const Projects = ({setNavTitle}) => {
+export const Projects = ({setNavTitle, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor}) => {
 
     const { ref, inView } = useInView({
         threshold: 0.5,
@@ -9,6 +9,11 @@ export const Projects = ({setNavTitle}) => {
 
     useEffect(() => {
         if (inView) {
+            setNavTitleColor("text-[#1A1A1A]");
+            setNavBarColor("#F0F0F0"); // Fixed: lowercase 'f' in hex code
+            setNavMainMenuBtnColor("bg-[#1A1A1A]");
+            setNavSocialColor("filter invert");
+
             setNavTitle("03 Projects");
         }
     }, [inView, setNavTitle]);

@@ -60,10 +60,10 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
     // Section-level styles and effects
     useEffect(() => {
         if (sectionInView) {
-            setNavTitleColor("text-[#1A1A1A]");
-            setNavBarColor("#ffffff"); // Fixed: lowercase 'f' in hex code
-            setNavMainMenuBtnColor("bg-[#1A1A1A]");
-            setNavSocialColor("filter invert");
+            setNavTitleColor("text-[#F0F0F0]");
+            setNavBarColor("#1A1A1A");
+            setNavMainMenuBtnColor("bg-white");
+            setNavSocialColor("");
 
             setNavTitle("02 Experience");
             setAnimateAboutBGClass("animate-scaleOut-bg");
@@ -134,13 +134,13 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
             <section ref={sectionRef} id="experience"className="relative w-dvw top-0 flex justify-center items-center">
             {/*<div className="fixed bg-white/50 top-1/2 left-0 w-full h-1 pointer-events-none z-10" /> to view the center of the screen*/}
                 <div className="relative h-full w-full flex flex-col">
-                    <div ref={setBlock0Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block0Focus}`}>
+                    <div ref={setBlock0Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block0Focus}`} >
                         <div className={`absolute h-full w-full ${block0Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
                             <div className="flex size-full animate-pulse items-center justify-end" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
-                                <span className="text-white text-[8rem] font-bold"> &lt; </span>
+                                <span className="text-[#F0F0F0] text-[8rem] font-bold"> &lt; </span>
                             </div>
                         </div>
-                        <div  className={`relative h-full w-full flex flex-col justify-center text-white `}>
+                        <div  className={`relative h-full w-full flex flex-col justify-center text-[#F0F0F0] `}>
                             <div id="block-0" className={`m-10  ${block0Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}>
                                 <p className="md:text-6xl sm:text-4xl 3xs:text-2xl font-sans font-bold">Research Assistant</p>
                                 <a href="https://adric.dlsu.edu.ph/index.php/technology-education-entertainment-empathy-design-te3d-house/" target="_blank" rel="noopener noreferrer">
@@ -155,7 +155,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                                 </ul>
                             </div>
                         </div>
-                        <div className="relative h-full w-[50%] lg:flex justify-end m-10 font-sans font-bold text-white 3xs:hidden ">
+                        <div className="relative h-full w-[50%] lg:flex justify-end m-10 font-sans font-bold text-[#F0F0F0] 3xs:hidden ">
                             <p className={`text-8xl ${block0Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}> 2024 </p>
                         </div>
                         <div ref={block0ShadowRef} className={`${block0Shadow} duration-1000`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
@@ -164,10 +164,10 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     <div ref={setBlock1Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block1Focus}`}>
                         <div className={`absolute h-full w-full ${block1Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
                             <div className="flex size-full animate-pulse items-center justify-end" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
-                                <span className="text-white text-[8rem] font-bold"> &lt; </span>
+                                <span className="text-[#F0F0F0] text-[8rem] font-bold"> &lt; </span>
                             </div>
                         </div>
-                        <div  className={`relative h-full w-full flex flex-col justify-center text-white `}>
+                        <div  className={`relative h-full w-full flex flex-col justify-center text-[#F0F0F0] `}>
                             <div id="block-0" className={`m-10 ${block1Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}>
                                 <p className="md:text-6xl sm:text-4xl 3xs:text-2xl font-sans font-bold">V.P. - Publicity and Creatives</p>
                                 <a href="https://www.facebook.com/LSCSLagunaCampus" target="_blank" rel="noopener noreferrer">
@@ -183,7 +183,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                                 </ul>
                             </div>
                         </div>
-                        <div className="relative h-full w-full lg:flex justify-end m-10 font-sans font-bold text-white 3xs:hidden ">
+                        <div className="relative h-full w-full lg:flex justify-end m-10 font-sans font-bold text-[#F0F0F0] 3xs:hidden ">
                             <div className={`flex flex-col items-center ${block1Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}> 
                                 <p className="text-8xl">2024</p>
                                 <p className="text-8xl">&uarr;</p>
@@ -196,10 +196,10 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     <div ref={setBlock2Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block2Focus}`}>
                         <div className={`absolute h-full w-full ${block2Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
                             <div className="flex size-full animate-pulse items-center justify-end" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
-                                <span className="text-white text-[8rem] font-bold"> &lt; </span>
+                                <span className="text-[#F0F0F0] text-[8rem] font-bold"> &lt; </span>
                             </div>
                         </div>
-                        <div  className={`relative h-full w-full flex flex-col justify-center text-white `}>
+                        <div  className={`relative h-full w-full flex flex-col justify-center text-[#F0F0F0] `}>
                             <div id="block-0" className={`m-10 ${block2Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}>
                                 <p className="md:text-6xl sm:text-4xl 3xs:text-2xl font-sans font-bold">Chairperson for Creatives</p>
                                 <a href="https://www.facebook.com/LCSGDLSU" target="_blank" rel="noopener noreferrer">
@@ -214,7 +214,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                                 </ul>
                             </div>
                         </div>
-                        <div className="relative h-full w-[50%] lg:flex justify-end m-10 font-sans font-bold text-white 3xs:hidden ">
+                        <div className="relative h-full w-[50%] lg:flex justify-end m-10 font-sans font-bold text-[#F0F0F0] 3xs:hidden ">
                             <p className={`text-8xl ${block2Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}> 2021 </p>
                         </div>
                         <div ref={block2ShadowRef} className={`${block2Shadow} duration-1000`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>

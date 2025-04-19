@@ -77,7 +77,8 @@ function App() {
           setNavSocialColor = {setNavSocialColor}
         />
       }
-      <section className="relative w-full bg-fixed bg-no-repeat bg-cover" style={{ backgroundImage: "url(/mainMenuBG_Invert.png)" }}>
+      
+      <section className="relative w-full bg-fixed bg-no-repeat bg-cover bg-[#000000] bg-blend-screen" style={{ backgroundImage: "url(/mainMenuBG_Invert_minimal.png)" }}>
         {
           <Experience
             setNavTitle = {setNavTitle}
@@ -92,6 +93,10 @@ function App() {
         {
           <Projects
             setNavTitle = {setNavTitle}
+            setNavTitleColor = {setNavTitleColor}
+            setNavBarColor = {setNavBarColor}
+            setNavMainMenuBtnColor = {setNavMainMenuBtnColor}
+            setNavSocialColor = {setNavSocialColor}
           />
         }
       </section>

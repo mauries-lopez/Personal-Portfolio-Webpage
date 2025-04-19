@@ -23,10 +23,10 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
     useEffect(() => {
         if (inView) {
             // Recolor (default)
-            setNavTitleColor("text-white");
-            setNavBarColor("#1A1A1A");
-            setNavMainMenuBtnColor("bg-white");
-            setNavSocialColor("");
+            setNavTitleColor("text-[#1A1A1A]");
+            setNavBarColor("#F0F0F0");
+            setNavMainMenuBtnColor("bg-[#1A1A1A]");
+            setNavSocialColor("filter invert");
 
             setNavTitle("01 About Me");
             setTimeout(() => {
@@ -95,64 +95,64 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
     return (
         <section id="about" ref={ref} className="relative h-svh w-full top-0 flex flex-col justify-center items-center bg-black/95 overflow-hidden" >
             <div className={`absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-[3px] z-0 scale-[1.1] duration-3000 ${animateAboutBGClass}`} style={{ backgroundImage: "url(/aboutMeBG.png)" }}>
-            <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(0,0,0,1), transparent)", pointerEvents: "none"}}/></div>
+            <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(26,26,26, 1), transparent)", pointerEvents: "none"}}/></div>
             <div className="relative h-[70%] sm:w-[50%] 3xs:w-[80%] flex flex-col justify-center items-center ">
                 <div id="imageDiv" className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] flex flex-col 3xs:pb-5 justify-center items-center bg-fixed">
                     <div className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] bg-no-repeat bg-cover bg-bottom mask-radial-from-99% mask-radial-[40%_50%] " style={{backgroundImage: "url(/profilePictureWbg.jpg"}}>
                     </div>
                 </div>
-                <div className="relative w-full md:pt-0  flex flex-col justify-center items-center  bg-black/60 rounded-2xl">
-                    <div id="nameDiv" className="relative md:p-5 3xs:p-2 text-white md:text-5xl 3xs:text-4xl font-bold font-sans text-center break-words flex justify-center items-center">
+                <div className="relative w-full md:pt-0  flex flex-col justify-center items-center  bg-[#1A1A1A]/80 rounded-2xl">
+                    <div id="nameDiv" className="relative md:p-5 3xs:p-2 text-[#F0F0F0] md:text-5xl 3xs:text-4xl font-bold font-sans text-center break-words flex justify-center items-center">
                         Mauries Lopez
                     </div>
-                    <div className="relative w-full flex flex-col justify-start md:overflow-hidden rounded-2xl space-y-0.5"> 
-                        <div id="subNameDiv" className={`relative ${introductionDivBtnDisplay} bg-white text-black md:text-2xl 3xs:text-xl italic font-bold font-sans text-start break-words p-3 cursor-pointer duration-500 hover:bg-white/80`} onClick={introductionClick}>
+                    <div className="relative w-full flex flex-col justify-start md:overflow-hidden rounded-2xl bg-[#1A1A1A]/50 space-y-0.5"> 
+                        <div id="subNameDiv" className={`relative ${introductionDivBtnDisplay} bg-[#F0F0F0] text-[#1A1A1A] md:text-2xl 3xs:text-xl italic font-bold font-sans text-start break-words p-3 cursor-pointer duration-500 hover:bg-white/80`} onClick={introductionClick}>
                             {introductionDivName}
                         </div>
                         <div id="introDiv" className={`${introductionDisplay}`}>
                             <div className="m-3">
-                                <div id="subNameDiv" className="relative text-white md:text-2xl 3xs:text-lg italic font-bold font-sans text-start break-words ">
+                                <div id="subNameDiv" className="relative text-[#F0F0F0] md:text-2xl 3xs:text-lg italic font-bold font-sans text-start break-words ">
                                     B.S. Computer Science Student
                                 </div>
-                                <div id="subSchoolNameDiv" className="relative  text-white md:text-xl 3xs:text-md italic font-bold font-sans text-start break-words ">
+                                <div id="subSchoolNameDiv" className="relative  text-[#F0F0F0] md:text-xl 3xs:text-md italic font-bold font-sans text-start break-words ">
                                     De La Salle University
                                 </div>
-                                <div id="shortIntroDiv" className="relative text-white md:text-xl 3xs:text-md font-sans text-justify break-words pt-3">
+                                <div id="shortIntroDiv" className="relative text-[#F0F0F0] md:text-xl 3xs:text-md font-sans text-justify break-words pt-3">
                                         My passion for coding and curiosity have led me to work on diverse projects, as I continuously seek opportunities to learn and grow. I thrive on challenges that push me to expand my skills and think creatively.
                                 </div> 
                             </div>
                         </div>
                         <div className="flex flex-col">
-                            <div id="subNameDiv" className={`relative ${researchInterestDivBtnDisplay} bg-white text-black md:text-2xl 3xs:text-xl italic font-bold font-sans text-start break-words p-3 cursor-pointer duration-500 hover:bg-white/80`} onClick={researchInterestClick}>
+                            <div id="subNameDiv" className={`relative ${researchInterestDivBtnDisplay} bg-[#F0F0F0] text-[#1A1A1A] md:text-2xl 3xs:text-xl italic font-bold font-sans text-start break-words p-3 cursor-pointer duration-500 hover:bg-white/80`} onClick={researchInterestClick}>
                                 {researchInterestDivName}
                             </div>
                             <div id="researchInterestContentDiv" className={`${researchInterestDisplay}`}>
-                                <div className="text-white md:text-xl 3xs:text-md font-sans break-words m-3">
+                                <div className="text-[#F0F0F0] md:text-xl 3xs:text-md font-sans break-words m-3">
                                     <ul className="list-inside list-decimal">
                                         <li> Deep Learning </li>
                                         <li> Sentiment Analysis </li>
                                         <li> Natural Language Processing </li>
                                         <li> Neural Networks (Encoders) </li>
                                     </ul>
-                                    <div className="text-white font-sans pt-3 text-justify italic">
+                                    <div className="text-[#F0F0F0] font-sans pt-3 text-justify italic">
                                         Currently working on a thesis about "Exploring Transformer-based Approaches in Sentiment Prediction of Philippine Tweets."
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="flex flex-col">
-                            <div id="subNameDiv" className={`relative ${educationDivBtnDisplay} bg-white text-black md:text-2xl 3xs:text-xl italic font-bold font-sans text-start break-words p-3 cursor-pointer duration-500 hover:bg-white/80`} onClick={educationDisplayClick}>
+                            <div id="subNameDiv" className={`relative ${educationDivBtnDisplay} bg-[#F0F0F0] text-[#1A1A1A] md:text-2xl 3xs:text-xl italic font-bold font-sans text-start break-words p-3 cursor-pointer duration-500 hover:bg-white/80`} onClick={educationDisplayClick}>
                                 {educationDivName}
                             </div>
                             <div id="educationContentDiv" className={`${educationDisplay}`}>
-                                <div className="text-white md:text-xl 3xs:text-md font-sans break-words m-3">
-                                    <div className="text-white font-sans text-justify">
+                                <div className="text-[#F0F0F0] md:text-xl 3xs:text-md font-sans break-words m-3">
+                                    <div className="text-[#F0F0F0] font-sans text-justify">
                                         <p className="font-bold">De La Salle University</p> 
                                         <p className="italic text-sm"> 2021-2025</p>
                                         <p>Bachelor of Science in Computer Science Major in Software Technology</p>
                                     </div>
                                     <hr className="mt-3"></hr>
-                                    <div className="text-white font-sans pt-3 text-justify">
+                                    <div className="text-[#F0F0F0] font-sans pt-3 text-justify">
                                         <p className="font-bold">Mapúa Malayan Colleges Laguna</p> 
                                         <p className="italic text-sm">2019-2021 (Senior Highschool)</p>
                                         <p>Science, Technology, Engineering, and Mathematics Track</p>
@@ -164,9 +164,9 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
                 </div>
             </div>
             <div id="arrowDownDiv" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 h-[10%] w-[10%] flex justify-center items-center animate-pulse">
-                <Link to="experience" spy={true} smooth={true} offset={-80} duration={500}>
+                <Link to="experience" spy={true} smooth={true} offset={window.innerWidth < 640 ? -50 : -170} duration={500}>
                     <div className="flex md:size-12 3xs:size-14 sm:animate-bounce 3xs:animate-pulse 3xs:mb-5 items-center justify-center rounded-full md:bg-black p-2 ring-1 md:ring-gray-900/100 dark:bg-white/30 dark:ring-white/100 cursor-pointer">
-                        <svg className="size-12 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
+                        <svg className="size-12 text-[#F0F0F0]" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                         </svg>
                     </div>

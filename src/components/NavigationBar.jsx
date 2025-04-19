@@ -21,7 +21,7 @@ export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverfl
                 </div>
             </div>
             <div className="relative h-full w-full" id="titlePartition">
-                <div className={`h-full w-full flex flex-row items-center md:justify-start 3xs:justify-center md:text-4xl sm:text-3xl 3xs:text-lg font-bold ${navTitleColor} duration-500 text-center`}>
+                <div className={`h-full w-full flex flex-row items-center md:justify-start 3xs:justify-center md:text-4xl sm:text-3xl 3xs:text-lg font-bold ${navTitleColor} duration-500 text-center font-sans`}>
                     <span > {navTitle} </span>
                 </div>
             </div>
