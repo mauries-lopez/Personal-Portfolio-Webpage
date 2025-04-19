@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 export const Projects = ({setNavTitle}) => {
 
     const { ref, inView } = useInView({
-        threshold: 0.9,
+        threshold: 0.5,
     });
 
     useEffect(() => {
@@ -14,8 +14,8 @@ export const Projects = ({setNavTitle}) => {
     }, [inView, setNavTitle]);
     
     return (
-        <section id="projects" ref={ref} className="relative h-svh w-dvw top-0 bg-yellow-300 flex justify-center items-center">
-            <div className="h-[70%] w-[70%] bg-yellow-500 ">
+        <section id="projects" ref={ref} className="relative h-svh w-dvw top-0 flex justify-center items-center">
+            <div className="mt-20 h-[60%] w-full bg-white/50">
                 
             </div>
         </section>   

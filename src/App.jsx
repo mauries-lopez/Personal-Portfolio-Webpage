@@ -28,7 +28,7 @@ function App() {
 
   useEffect( () => {
     // Initialize Lenis
-    const lenis = new Lenis();
+    const lenis = new Lenis({overscroll:"false"});
 
     // Use requestAnimationFrame to continuously update the scroll
     function raf(time) {
@@ -77,24 +77,25 @@ function App() {
           setNavSocialColor = {setNavSocialColor}
         />
       }
+      <section className="relative w-full bg-fixed bg-no-repeat bg-cover" style={{ backgroundImage: "url(/mainMenuBG_Invert.png)" }}>
+        {
+          <Experience
+            setNavTitle = {setNavTitle}
+            setAnimateAboutBGClass = {setAnimateAboutBGClass}
+            setNavTitleColor = {setNavTitleColor}
+            setNavBarColor = {setNavBarColor}
+            setNavMainMenuBtnColor = {setNavMainMenuBtnColor}
+            setNavSocialColor = {setNavSocialColor}
+          />
+        }
 
-      {
-        <Experience
-          setNavTitle = {setNavTitle}
-          setAnimateAboutBGClass = {setAnimateAboutBGClass}
-          setNavTitleColor = {setNavTitleColor}
-          setNavBarColor = {setNavBarColor}
-          setNavMainMenuBtnColor = {setNavMainMenuBtnColor}
-          setNavSocialColor = {setNavSocialColor}
-        />
-      }
-
-      
-      {
-        <Projects
-          setNavTitle = {setNavTitle}
-        />
-      }
+        {
+          <Projects
+            setNavTitle = {setNavTitle}
+          />
+        }
+      </section>
+     
 
       {/*
       {

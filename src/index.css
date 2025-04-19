@@ -46,7 +46,7 @@ body{
   }
 
   .animate-scaleOut-bg{
-    animation: scaleOut 0.6s forwards;
+    animation: scaleOut 3s forwards;
   }
 }
 
