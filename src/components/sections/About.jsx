@@ -163,9 +163,9 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
                     </div>
                 </div>
             </div>
-            <div id="arrowDownDiv" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 h-[10%] w-[10%] flex justify-center items-center">
+            <div id="arrowDownDiv" className="absolute bottom-0 left-1/2 transform -translate-x-1/2 z-20 h-[10%] w-[10%] flex justify-center items-center animate-pulse">
                 <Link to="experience" spy={true} smooth={true} offset={-80} duration={500}>
-                    <div className="flex md:size-12 3xs:size-14 sm:animate-bounce 3xs:animate-pulse 3xs:mb-5 items-center justify-center rounded-full md:bg-black p-2 ring-1 md:ring-gray-900/100 dark:bg-white/30 dark:ring-white/100 cursor-pointer">
+                    <div className="flex md:size-12 3xs:size-14 sm:animate-bounce 3xs:animate-pulse 3xs:mb-15 items-center justify-center rounded-full md:bg-black p-2 ring-1 md:ring-gray-900/100 dark:bg-white/30 dark:ring-white/100 cursor-pointer">
                         <svg className="size-12 text-white" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" viewBox="0 0 24 24" stroke="currentColor">
                             <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                         </svg>
