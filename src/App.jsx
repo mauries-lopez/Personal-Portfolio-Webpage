@@ -40,7 +40,7 @@ function App() {
   }, [])
 
   return (
-    <div className="w-dvw h-svh relative">
+    <div className="w-dvw h-svh">
       {!isLoaded && 
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       }
@@ -88,13 +88,15 @@ function App() {
           setNavSocialColor = {setNavSocialColor}
         />
       }
-    
+
+      
       {
         <Projects
           setNavTitle = {setNavTitle}
         />
       }
 
+      {/*
       {
         <TechStack
           setNavTitle = {setNavTitle}
@@ -106,7 +108,7 @@ function App() {
           setNavTitle = {setNavTitle}
         />
       }    
-      
+      */}
     </div>
   );
 }

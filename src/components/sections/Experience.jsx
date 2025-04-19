@@ -5,17 +5,52 @@ import './Experience.css'
 
 export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor}) => {
     // Refs for section
-    const { ref: sectionRef, inView: sectionInView } = useInView({ threshold: 0.72 });
+    const { ref: sectionRef, inView: sectionInView } = useInView({ threshold: 0.8 });
 
     // Refs for each block
     const { ref: block0Ref, inView: block0InView } = useInView({ threshold: 0.7 });
     const { ref: block1Ref, inView: block1InView } = useInView({ threshold: 0.7 });
     const { ref: block2Ref, inView: block2InView } = useInView({ threshold: 0.7 });
 
+    // Refs for each block: white shadow
+    const { ref: block0ShadowRef, inView: blockShadow0InView } = useInView({
+        threshold: 0,
+        rootMargin: "-50% 0px -50% 0px",
+    });
+      
+    const { ref: block1ShadowRef, inView: blockShadow1InView } = useInView({
+        threshold: 0,
+        rootMargin: "-50% 0px -50% 0px",
+    });
+      
+    const { ref: block2ShadowRef, inView: blockShadow2InView } = useInView({
+        threshold: 0,
+        rootMargin: "-50% 0px -50% 0px",
+    });
+    
+    // Combination of both references
+    const setBlock0Refs = (node) => {
+        block0Ref(node);
+        block0ShadowRef(node);
+    };
+    const setBlock1Refs = (node) => {
+        block1Ref(node);
+        block1ShadowRef(node);
+    };
+    const setBlock2Refs = (node) => {
+        block2Ref(node);
+        block2ShadowRef(node);
+    };
+
     // Booleans for triggering animation per block
     const [block0Bool, setBlock0Bool] = useState(false);
     const [block1Bool, setBlock1Bool] = useState(false);
     const [block2Bool, setBlock2Bool] = useState(false);
+
+    // Booleans for inner white shadow animation per block
+    const [block0Shadow, setBlock0Shadow] = useState("opacity-0");
+    const [block1Shadow, setBlock1Shadow] = useState("opacity-0");
+    const [block2Shadow, setBlock2Shadow] = useState("opacity-0");
 
     // Section-level styles and effects
     useEffect(() => {
@@ -30,9 +65,8 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
         }
     }, [sectionInView]);
 
+    // For slide-in and slide-out of components each block
     useEffect(() => {
-        console.log(block0InView);
-        console.log(block0Bool)
         if (block0InView && !block0Bool) {
             setBlock0Bool(true);
         }
@@ -47,17 +81,42 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
             
     }, [block0InView, block0Bool, block1InView, block1Bool, block2InView, block2Bool]);
 
+    // For focus block animation
+    useEffect(() => {
+        if (blockShadow0InView && block0Bool) {
+            // Reset others
+            setBlock1Shadow("opacity-0");
+            setBlock2Shadow("opacity-0");
+    
+            // Show this one
+            setBlock0Shadow("opacity-100");
+        } else if (blockShadow1InView && block1Bool) {
+            setBlock0Shadow("opacity-0");
+            setBlock2Shadow("opacity-0");
+    
+            setBlock1Shadow("opacity-100");
+        } else if (blockShadow2InView && block2Bool) {
+            setBlock0Shadow("opacity-0");
+            setBlock1Shadow("opacity-0");
+    
+            setBlock2Shadow("opacity-100");
+        } else {
+            setBlock0Shadow("opacity-0");
+            setBlock1Shadow("opacity-0");
+            setBlock2Shadow("opacity-0");
+        }
+    }, [blockShadow0InView, blockShadow1InView, blockShadow2InView, block0Bool, block1Bool, block2Bool]);
 
     return (
         <section id="experience" ref={sectionRef} className="relative w-dvw top-0 bg-gray-700 flex justify-center items-center">
-            <div className="relative h-full w-full bg-white flex flex-col " style={{ backgroundColor: "#1A1A1A" }}>
-                
-                <div ref={block0Ref} className="relative h-full w-full flex flex-row justify-center items-center">
+            {/*<div className="fixed bg-white/50 top-1/2 left-0 w-full h-1 pointer-events-none z-10" /> to view the center of the screen*/}
+            <div className="relative h-full w-full bg-white flex flex-col bg-fixed bg-no-repeat bg-cover" style={{ backgroundImage: "url(/mainMenuBG_Invert.png)" }}>
+                <div ref={setBlock0Refs} className="relative h-full w-full flex flex-row justify-center items-center">
                     <div className={`absolute h-full w-full ${block0Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
                         <div className="flex size-full animate-pulse items-center justify-center  bg-black p-2 ring-1 ring-gray-900/100 dark:bg-white/30 dark:ring-white/100">
                             <span className="text-white text-[8rem] font-bold"> &lt; </span>
                         </div>
-                     </div>
+                    </div>
                     <div  className={`relative h-full w-full flex flex-col justify-center text-white `}>
                         <div id="block-0" className={`m-10  ${block0Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}>
                             <p className="md:text-6xl sm:text-4xl 3xs:text-2xl font-sans font-bold">Research Assistant</p>
@@ -76,16 +135,17 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     <div className="relative h-full w-[50%] lg:flex justify-end m-10 font-sans font-bold text-white 3xs:hidden ">
                         <p className={`text-8xl ${block0Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}> 2024 </p>
                     </div>
+                    <div ref={block0ShadowRef} className={`${block0Shadow} duration-1000`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(255,255,255,0.3), transparent)", pointerEvents: "none"}}/>
                 </div>
 
                 <hr className="text-white" />
 
-                <div ref={block1Ref} className="relative h-full w-full flex flex-row justify-center items-center">
+                <div ref={setBlock1Refs} className="relative h-full w-full flex flex-row justify-center items-center">
                     <div className={`absolute h-full w-full ${block1Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
                         <div className="flex size-full animate-pulse items-center justify-center  bg-black p-2 ring-1 ring-gray-900/100 dark:bg-white/30 dark:ring-white/100">
                             <span className="text-white text-[8rem] font-bold"> &lt; </span>
                         </div>
-                     </div>
+                    </div>
                     <div  className={`relative h-full w-full flex flex-col justify-center text-white `}>
                         <div id="block-0" className={`m-10 ${block1Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}>
                             <p className="md:text-6xl sm:text-4xl 3xs:text-2xl font-sans font-bold">V.P. - Publicity and Creatives</p>
@@ -109,17 +169,17 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                             <p className="text-8xl">2021</p> 
                         </div>
                     </div>
+                    <div className={`${block1Shadow} duration-1000`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(255,255,255,0.3), transparent)", pointerEvents: "none"}}/>
                 </div>
 
                 <hr className="text-white" />
 
-                
-                <div ref={block2Ref} className="relative h-full w-full flex flex-row justify-center items-center">
+                <div ref={setBlock2Refs} className="relative h-full w-full flex flex-row justify-center items-center">
                     <div className={`absolute h-full w-full ${block2Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
                         <div className="flex size-full animate-pulse items-center justify-center  bg-black p-2 ring-1 ring-gray-900/100 dark:bg-white/30 dark:ring-white/100">
                             <span className="text-white text-[8rem] font-bold"> &lt; </span>
                         </div>
-                     </div>
+                    </div>
                     <div  className={`relative h-full w-full flex flex-col justify-center text-white `}>
                         <div id="block-0" className={`m-10 ${block2Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}>
                             <p className="md:text-6xl sm:text-4xl 3xs:text-2xl font-sans font-bold">Chairperson for Creatives</p>
@@ -138,8 +198,8 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     <div className="relative h-full w-[50%] lg:flex justify-end m-10 font-sans font-bold text-white 3xs:hidden ">
                         <p className={`text-8xl ${block2Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}> 2021 </p>
                     </div>
+                    <div ref={block2ShadowRef} className={`${block2Shadow} duration-1000`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(255,255,255,0.3), transparent)", pointerEvents: "none"}}/>
                 </div>
-
             </div>
         </section>
     );
