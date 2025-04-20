@@ -28,7 +28,7 @@ function App() {
 
   useEffect( () => {
     // Initialize Lenis
-    const lenis = new Lenis({overscroll:"false"});
+    const lenis = new Lenis();
 
     // Use requestAnimationFrame to continuously update the scroll
     function raf(time) {
@@ -40,7 +40,7 @@ function App() {
   }, [])
 
   return (
-    <div className="w-dvw h-svh">
+    <div className="h-svh w-full">
       {!isLoaded && 
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       }
@@ -78,29 +78,84 @@ function App() {
         />
       }
       
-      <section className="relative w-full bg-fixed bg-no-repeat bg-cover bg-[#000000] bg-blend-screen" style={{ backgroundImage: "url(/mainMenuBG_Invert_minimal.png)" }}>
-        {
-          <Experience
-            setNavTitle = {setNavTitle}
-            setAnimateAboutBGClass = {setAnimateAboutBGClass}
-            setNavTitleColor = {setNavTitleColor}
-            setNavBarColor = {setNavBarColor}
-            setNavMainMenuBtnColor = {setNavMainMenuBtnColor}
-            setNavSocialColor = {setNavSocialColor}
-          />
-        }
+      {
+        <Experience
+          setNavTitle = {setNavTitle}
+          setAnimateAboutBGClass = {setAnimateAboutBGClass}
+          setNavTitleColor = {setNavTitleColor}
+          setNavBarColor = {setNavBarColor}
+          setNavMainMenuBtnColor = {setNavMainMenuBtnColor}
+          setNavSocialColor = {setNavSocialColor}
+        />
+      }
 
-        {
-          <Projects
-            setNavTitle = {setNavTitle}
-            setNavTitleColor = {setNavTitleColor}
-            setNavBarColor = {setNavBarColor}
-            setNavMainMenuBtnColor = {setNavMainMenuBtnColor}
-            setNavSocialColor = {setNavSocialColor}
-          />
-        }
-      </section>
-     
+      <Projects
+        number="00"
+        title="BERT-Based Sentiment Prediction Model"
+        description="I am working with a team to explore the use of emojis from tweet data as initial training data for transformers (e.g., TwHIN-BERT, mBERT, Tagalog-BERT, RoBERTa-Tagalog) that are pre-trained on different domains, applied to sentiment analysis of Philippine text data. To support further research, the best-performing model from our study will be released to the public for experimental use only and is not intended for public deployment."
+        image="/distributedSystem.jpeg"
+        reverse={false}
+        setNavTitle={setNavTitle}
+        setNavTitleColor={setNavTitleColor}
+        setNavBarColor={setNavBarColor}
+        setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+        setNavSocialColor={setNavSocialColor}
+      />
+
+      
+      <Projects
+        number="01"
+        title="Filbis"
+        description="Filbis is a Health Chatbot made by DOST and DLSU under the TE3D ADRiC Research House. The name was derived from the term Fil-Bis that means Filipino-Bisaya."
+        image="/distributedSystem.jpeg"
+        reverse={true}
+        setNavTitle={setNavTitle}
+        setNavTitleColor={setNavTitleColor}
+        setNavBarColor={setNavBarColor}
+        setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+        setNavSocialColor={setNavSocialColor}
+      />
+
+                  
+      <Projects
+        title="Online Enrollment System with Fault Tolerance"
+        number="02"
+        description="This system is implemented using different microservices distributed across multiple nodes (virtual machines) that are connected within the same network. It has fault tolerance, meaning that if one feature goes down, the rest of the features remain fully functional."
+        image="/distributedSystem.jpeg"
+        reverse={false}
+        setNavTitle={setNavTitle}
+        setNavTitleColor={setNavTitleColor}
+        setNavBarColor={setNavBarColor}
+        setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+        setNavSocialColor={setNavSocialColor}
+      />
+      
+      <Projects
+        number="03"
+        title="Shuttle Reservation System"
+        description="This system aims to improve the existing scheduling process for the Arrows Express Shuttle, which currently relies solely on Google Forms, by introducing innovative features and a user-friendly profile system for easier access. Our goal is to provide a more comfortable and stress-free journey for all passengers by streamlining the booking experience and enhancing overall usability."
+        image="/distributedSystem.jpeg"
+        reverse={true}
+        setNavTitle={setNavTitle}
+        setNavTitleColor={setNavTitleColor}
+        setNavBarColor={setNavBarColor}
+        setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+        setNavSocialColor={setNavSocialColor}
+      />
+
+      <Projects
+        number="04"
+        title="PomoPet"
+        description="A productivity app that uses the Pomodoro technique with a virtual pet to boost focus, playing study-friendly music during sessions. The pet gains experience, and users can level it up by doing short exercises during breaks."
+        image="/distributedSystem.jpeg"
+        reverse={false}
+        setNavTitle={setNavTitle}
+        setNavTitleColor={setNavTitleColor}
+        setNavBarColor={setNavBarColor}
+        setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+        setNavSocialColor={setNavSocialColor}
+      />
+
 
       {/*
       {
