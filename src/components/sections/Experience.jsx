@@ -61,7 +61,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
     useEffect(() => {
         if (sectionInView) {
             setNavTitleColor("text-[#F0F0F0]");
-            setNavBarColor("#1A1A1A");
+            setNavBarColor("#1A1A1A90");
             setNavMainMenuBtnColor("bg-white");
             setNavSocialColor("");
 

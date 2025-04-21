@@ -10,7 +10,7 @@ export const Projects = ({title, number, description, image, reverse = false, se
     useEffect(() => {
         if (inView) {
             setNavTitleColor("text-[#1A1A1A]");
-            setNavBarColor("#F0F0F0"); // Fixed: lowercase 'f' in hex code
+            setNavBarColor("#F0F0F090"); // Fixed: lowercase 'f' in hex code
             setNavMainMenuBtnColor("bg-[#1A1A1A]");
             setNavSocialColor("filter invert");
 

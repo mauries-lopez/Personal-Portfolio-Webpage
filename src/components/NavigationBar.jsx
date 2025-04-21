@@ -19,6 +19,7 @@ export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverfl
 
     return (
         <nav className="fixed top-0 z-40 w-dvw md:h-[6rem] xs:h-[4rem] 3xs:h-[4rem] flex flex-row items-center duration-1000" style={{backgroundColor: navBarColor}}>
+            <div className="absolute h-full w-full backdrop-blur-lg opacity-90" />
             <div className="relative h-full w-xs flex flex-row space-x-1.5 justify-center items-center" id="hamburgerPartition" >
                 <div className="transform transition-transform duration-200 hover:scale-125 flex flex-row space-x-1.5 cursor-pointer" id="hamburgerBtn" onClick={handleHamburgerClick}>
                     <div className={`w-[0.3rem] h-[2rem] ${navMainMenuBtnColor} duration-500`}></div>

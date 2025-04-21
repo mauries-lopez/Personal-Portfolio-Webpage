@@ -24,7 +24,7 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
         if (inView) {
             // Recolor (default)
             setNavTitleColor("text-[#1A1A1A]");
-            setNavBarColor("#F0F0F0");
+            setNavBarColor("#F0F0F090");
             setNavMainMenuBtnColor("bg-[#1A1A1A]");
             setNavSocialColor("filter invert");
 
@@ -94,7 +94,7 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
 
     return (
         <section id="about" ref={ref} className="relative h-svh w-svw top-0 flex flex-col justify-center items-center bg-black/95 overflow-hidden" >
-            <div className={`absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-[3px] z-0 scale-[1.1] duration-3000 ${animateAboutBGClass}`} style={{ backgroundImage: "url(/aboutMeBG.png)" }}>
+            <div className={`absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-[3px] z-0 scale-[1.1] duration-3000 bg`}>
             <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(26,26,26, 1), transparent)", pointerEvents: "none"}}/></div>
             <div className="relative h-[70%] sm:w-[50%] 3xs:w-[80%] flex flex-col justify-center items-center ">
                 <div id="imageDiv" className="relative xl:h-[420px] xl:w-[500px] lg:h-[340px] lg:w-[400px] md:h-[260px] md:w-[300px] sm:h-[200px] sm:w-[250px] 3xs:h-[200px] 3xs:w-[230px] flex flex-col 3xs:pb-5 justify-center items-center bg-fixed">
