@@ -1,4 +1,6 @@
 import socialMediaLogo from '../assets/socialMediaLogo.svg'
+import { useEffect } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverflowStatus, navTitle, navTitleColor, navBarColor, navMainMenuBtnColor, navSocialColor}) => {
     
@@ -11,6 +13,10 @@ export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverfl
         }
     }
     
+    useEffect( () => {
+        
+    })
+
     return (
         <nav className="fixed top-0 z-40 w-dvw md:h-[6rem] xs:h-[4rem] 3xs:h-[4rem] flex flex-row items-center duration-1000" style={{backgroundColor: navBarColor}}>
             <div className="relative h-full w-xs flex flex-row space-x-1.5 justify-center items-center" id="hamburgerPartition" >
@@ -22,7 +28,15 @@ export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverfl
             </div>
             <div className="relative h-full w-full" id="titlePartition">
                 <div className={`h-full w-full flex flex-row items-center md:justify-start 3xs:justify-center md:text-4xl sm:text-3xl 3xs:text-lg font-bold ${navTitleColor} duration-500 text-center font-sans`}>
-                    <span > {navTitle} </span>
+                    <TypeAnimation 
+                        key={navTitle}
+                        sequence={[
+                            navTitle, 10
+                        ]}
+                        speed={5}
+                        cursor={false}
+                        repeat={Infinity}
+                    />
                 </div>
             </div>
             <div className="relative h-full w-xs" id="socialMediaPartition">

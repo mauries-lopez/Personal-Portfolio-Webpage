@@ -20,7 +20,7 @@ function App() {
   const [ navTitle, setNavTitle ] = useState("Section Title");
   const [ navTitleColor, setNavTitleColor] = useState("text-white")
   const [ navBarColor, setNavBarColor] = useState("#1A1A1A");
-  const [ navMainMenuBtnColor, setNavMainMenuBtnColor] = useState("bg-white");
+  const [ navMainMenuBtnColor, setNavMainMenuBtnColor] = useState("bg-[#F0F0F0]");
   const [ navSocialColor, setNavSocialColor] = useState(""); // mix-blend-darken = #1A1A1A
 
   // Background Animation
@@ -40,7 +40,7 @@ function App() {
   }, [])
 
   return (
-    <div className="h-svh w-full">
+    <div className="h-svh w-svw ]">
       {!isLoaded && 
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       }

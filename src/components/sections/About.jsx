@@ -1,7 +1,7 @@
 import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-
+import { TypeAnimation } from 'react-type-animation';
 
 export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor} ) => {
 
@@ -93,7 +93,7 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
     };
 
     return (
-        <section id="about" ref={ref} className="relative h-svh w-full top-0 flex flex-col justify-center items-center bg-black/95 overflow-hidden" >
+        <section id="about" ref={ref} className="relative h-svh w-svw top-0 flex flex-col justify-center items-center bg-black/95 overflow-hidden" >
             <div className={`absolute inset-0 bg-black/95 bg-cover bg-fixed bg-center blur-[3px] z-0 scale-[1.1] duration-3000 ${animateAboutBGClass}`} style={{ backgroundImage: "url(/aboutMeBG.png)" }}>
             <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "50%", background: "linear-gradient(to top, rgba(26,26,26, 1), transparent)", pointerEvents: "none"}}/></div>
             <div className="relative h-[70%] sm:w-[50%] 3xs:w-[80%] flex flex-col justify-center items-center ">
@@ -103,7 +103,14 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
                 </div>
                 <div className="relative w-full md:pt-0  flex flex-col justify-center items-center  bg-[#1A1A1A]/80 rounded-2xl">
                     <div id="nameDiv" className="relative md:p-5 3xs:p-2 text-[#F0F0F0] md:text-5xl 3xs:text-4xl font-bold font-sans text-center break-words flex justify-center items-center">
-                        Mauries Lopez
+                        <TypeAnimation 
+                            sequence={[
+                                'Mauries Lopez', 1000
+                            ]}
+                            speed={350}
+                            cusor={false}
+                            repeat={Infinity}
+                        />
                     </div>
                     <div className="relative w-full flex flex-col justify-start md:overflow-hidden rounded-2xl bg-[#1A1A1A]/50 space-y-0.5"> 
                         <div id="subNameDiv" className={`relative ${introductionDivBtnDisplay} bg-[#F0F0F0] text-[#1A1A1A] md:text-2xl 3xs:text-xl italic font-bold font-sans text-start break-words p-3 cursor-pointer duration-500 hover:bg-white/80`} onClick={introductionClick}>
