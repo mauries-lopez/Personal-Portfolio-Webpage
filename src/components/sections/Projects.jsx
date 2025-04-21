@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import StackIcon from "tech-stack-icons";
 
 export const Projects = ({title, number, description, image, reverse = false, setNavTitle, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor}) => {
 
