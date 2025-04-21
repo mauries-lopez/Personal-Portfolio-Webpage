@@ -129,7 +129,8 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
     }, [blockShadow0InView, blockShadow1InView, blockShadow2InView, block0Bool, block1Bool, block2Bool]);
 
     return (
-        <section ref={sectionRef} id="experience"className="relative w-dvw flex justify-center items-center bg-fixed bg-no-repeat bg-cover bg-[#000000] bg-blend-screen" style={{ backgroundImage: "url(/mainMenuBG_Invert_minimal.png)" }}>
+        <section ref={sectionRef} id="experience"className="relative w-dvw flex justify-center items-center bg-[#1A1A1A]" >
+            <div className="absolute h-full w-full blur-[3px] bg-fixed bg-no-repeat bg-cover" style={{ backgroundImage: "url(/mainMenuBG_Invert_minimal.png)" }}/>
         {/*<div className="fixed bg-white/50 top-1/2 left-0 w-full h-1 pointer-events-none z-10" /> to view the center of the screen*/}
             <div className="relative h-full w-full flex flex-col">
                 <div ref={setBlock0Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block0Focus}`} >
@@ -156,7 +157,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     <div className="relative h-full w-[50%] lg:flex justify-end m-10 font-sans font-bold text-[#F0F0F0] 3xs:hidden ">
                         <p className={`text-8xl ${block0Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}> 2024 </p>
                     </div>
-                    <div ref={block0ShadowRef} className={`${block0Shadow} duration-1000`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
+                    <div ref={block0ShadowRef} className={`${block0Shadow} duration-500`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
                 </div>
                 <div ref={setBlock1Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block1Focus}`}>
                     <div className={`absolute h-full w-full ${block1Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
@@ -187,7 +188,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                             <p className="text-8xl">2021</p> 
                         </div>
                     </div>
-                    <div className={`${block1Shadow} duration-1000`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
+                    <div className={`${block1Shadow} duration-500`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
                 </div>
                 <div ref={setBlock2Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block2Focus}`}>
                     <div className={`absolute h-full w-full ${block2Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
@@ -213,7 +214,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     <div className="relative h-full w-[50%] lg:flex justify-end m-10 font-sans font-bold text-[#F0F0F0] 3xs:hidden ">
                         <p className={`text-8xl ${block2Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}> 2021 </p>
                     </div>
-                    <div ref={block2ShadowRef} className={`${block2Shadow} duration-1000`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
+                    <div ref={block2ShadowRef} className={`${block2Shadow} duration-500`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
                 </div>
             </div>
         </section>
