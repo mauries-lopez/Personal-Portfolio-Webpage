@@ -215,8 +215,8 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                 <div ref={setBlock2Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block2Focus}`}>
                     <div className={`absolute h-full w-full duration-2000 ${block2Bool ? 'opacity-0' : 'opacity-100'}`}> 
                         <div className="flex size-full animate-pulse items-center justify-center" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
-                            <svg className="w-50 h-50 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={`${block1IconActive ? 'currentColor' : 'none'}`} viewBox="0 0 24 24">
-                                {block1IconActive ? (
+                            <svg className="w-50 h-50 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={`${block2IconActive ? 'currentColor' : 'none'}`} viewBox="0 0 24 24">
+                                {block2IconActive ? (
                                     <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/>
                                 ) : (
                                     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
