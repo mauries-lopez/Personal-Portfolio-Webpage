@@ -124,9 +124,9 @@ function App() {
 
                   
       <Projects
-        title="Online Enrollment System with Fault Tolerance"
+        title="Online Enrollment System with Microservices Architecture"
         number="02"
-        description="This system is implemented using different microservices distributed across multiple nodes (virtual machines) that are connected within the same network. It has fault tolerance, meaning that if one feature goes down, the rest of the features remain fully functional."
+        description="This system is implemented using multiple microservices distributed across several nodes (virtual machines) that are connected within the same network. It incorporates fault tolerance by supporting horizontal scaling, allowing the system to remain scalable and resilient. If one service fails, the remaining services continue to operate normally, ensuring uninterrupted functionality across the system."
         image="/distributedSystem.jpeg"
         hrefFile="DistributedSystem_Details.pdf"
         hrefDownloadName="DistributedSystem_Details"
@@ -139,14 +139,15 @@ function App() {
         setNavSocialColor={setNavSocialColor}
       />
       
+      
       <Projects
         number="03"
-        title="Shuttle Reservation System"
-        description="This system aims to improve the existing scheduling process for the Arrows Express Shuttle, which currently relies solely on Google Forms, by introducing innovative features and a user-friendly profile system for easier access. Our goal is to provide a more comfortable and stress-free journey for all passengers by streamlining the booking experience and enhancing overall usability."
-        image="/shuttleReservationBG.jpeg"
-        hrefFile="https://dlsu-shuttle.onrender.com/"
-        hrefDownloadName="DLSU Arrow Express"
-        hrefText="Try it out"
+        title="Network Media Upload Service"
+        description="This application simulates a multithreaded file transfer system within a local network using the producer-consumer model in C#. The producer component spawns n threads, each responsible for scanning a different folder for video files to send. Simultaneously, the consumer component also utilizes n threads to receive these video files from the producer and write them to the Desktop directory of the receiving machine. The system uses synchronization mechanisms and a task queue (regulated by a leaky bucket algorithm) to ensure smooth, thread-safe operations."
+        image="/networkProducerConsumer.jpeg"
+        hrefFile="networkProducerConsumer_Details.pdf"
+        hrefDownloadName="networkProducerConsumer_Details"
+        hrefText="Know More"
         reverse={true}
         setNavTitle={setNavTitle}
         setNavTitleColor={setNavTitleColor}
@@ -157,12 +158,12 @@ function App() {
 
       <Projects
         number="04"
-        title="PomoPet"
-        description="A productivity app that uses the Pomodoro technique with a virtual pet to boost focus, playing study-friendly music during sessions. The pet gains experience, and users can level it up by doing short exercises during breaks."
-        image="/pomoPetBG.jpeg"
-        hrefFile="pomoPet_Details.pdf"
-        hrefDownloadName="PomoPet_Details"
-        hrefText="Know More"
+        title="Shuttle Reservation System"
+        description="This system aims to improve the existing scheduling process for the Arrows Express Shuttle, which currently relies solely on Google Forms, by introducing innovative features and a user-friendly profile system for easier access. Our goal is to provide a more comfortable and stress-free journey for all passengers by streamlining the booking experience and enhancing overall usability."
+        image="/shuttleReservationBG.jpeg"
+        hrefFile="https://dlsu-shuttle.onrender.com/"
+        hrefDownloadName="DLSU Arrow Express"
+        hrefText="Try it out"
         reverse={false}
         setNavTitle={setNavTitle}
         setNavTitleColor={setNavTitleColor}
@@ -170,6 +171,23 @@ function App() {
         setNavMainMenuBtnColor={setNavMainMenuBtnColor}
         setNavSocialColor={setNavSocialColor}
       />
+
+      <Projects
+        number="05"
+        title="PomoPet"
+        description="A productivity app that uses the Pomodoro technique with a virtual pet to boost focus, playing study-friendly music during sessions. The pet gains experience, and users can level it up by doing short exercises during breaks."
+        image="/pomoPetBG.jpeg"
+        hrefFile="pomoPet_Details.pdf"
+        hrefDownloadName="PomoPet_Details"
+        hrefText="Know More"
+        reverse={true}
+        setNavTitle={setNavTitle}
+        setNavTitleColor={setNavTitleColor}
+        setNavBarColor={setNavBarColor}
+        setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+        setNavSocialColor={setNavSocialColor}
+      />
+
 
       {/* End Footer for Projects Section */}
       <div className="relative bg-[#F0F0F0] 3xs:h-[20%] md:h-[5%]">
