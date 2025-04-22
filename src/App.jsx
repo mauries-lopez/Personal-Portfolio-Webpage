@@ -40,11 +40,11 @@ function App() {
   }, [])
 
   return (
-    <div className="h-svh w-svw" >
+    <div className={`h-svh w-svw ${isLoaded ? '' : 'overflow-hidden'}`} >
       {!isLoaded && 
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       }
-  
+
       {
         <NavigationBar 
           setCurHamburgerStatus={setCurHamburgerStatus}
