@@ -24,8 +24,9 @@ export const LoadingScreen = ({onComplete}) => {
     }, [onComplete]);
 
     return (
-        <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-fixed bg-no-repeat bg-cover bg-center ${animateSwipe}`} style={{backgroundImage: "url(/mainMenuBG.png"}}>
-            <div className = "mb-4 text-4xl font-sans text-[#1A1A1A] font-bold">
+        <div className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-fixed bg-no-repeat bg-cover bg-center ${animateSwipe}`}>
+            <div className="absolute h-full w-full bg"/>
+            <div className = "mb-4 text-4xl z-50 font-sans text-[#1A1A1A] font-bold">
                 <span className="animate-blink ml-1"> {text} </span>
             </div>
 

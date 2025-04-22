@@ -130,8 +130,8 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
 
     return (
         <section ref={sectionRef} id="experience"className="relative w-dvw flex justify-center items-center bg-[#1A1A1A]" >
-            <div className="absolute h-full w-full blur-[3px] bg-fixed bg-no-repeat bg-cover" style={{ backgroundImage: "url(/mainMenuBG_Invert_minimal.png)" }}/>
-        {/*<div className="fixed bg-white/50 top-1/2 left-0 w-full h-1 pointer-events-none z-10" /> to view the center of the screen*/}
+            <div className="absolute h-full w-full blur-[3px] 3xs:bg-local sm:bg-fixed bg-no-repeat bg-cover" style={{ backgroundImage: "url(/mainMenuBG_Invert_minimal.png)" }}/>
+            {/*<div className="fixed bg-white/50 top-1/2 left-0 w-full h-1 pointer-events-none z-10" /> to view the center of the screen*/}
             <div className="relative h-full w-full flex flex-col">
                 <div ref={setBlock0Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block0Focus}`} >
                     <div className={`absolute h-full w-full ${block0Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 

@@ -40,9 +40,9 @@ export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverfl
                     />
                 </div>
             </div>
-            <div className="relative h-full w-xs" id="socialMediaPartition">
+            <div className={`relative h-full w-xs duration-500 ${navSocialColor}`} id="socialMediaPartition">
                 <div className="h-full w-full flex flex-row items-center justify-center ">
-                    <img src={socialMediaLogo} alt="Social Media Logo" width="50" height="50" className={`cursor-pointer transform transition-transform duration-200 hover:scale-125 ${navSocialColor} duration-500`}/>
+                    <img src={socialMediaLogo} alt="Social Media Logo" width="50" height="50" className={`cursor-pointer transform transition-transform duration-500 hover:scale-125 `}/>
                 </div>
             </div>
         </nav>

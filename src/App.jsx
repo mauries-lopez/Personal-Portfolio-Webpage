@@ -10,9 +10,9 @@ import { TechStack } from './components/sections/TechStack';
 import { Experience } from './components/sections/Experience';
 import { Contact } from './components/sections/Contact';
 import Lenis from 'lenis'
+import StackIcon from "tech-stack-icons";
 
 function App() {
-
   const [ isLoaded, setIsLoaded ] = useState(false)
   const [ curHamburgerStatus, setCurHamburgerStatus ] = useState(false);
   const [ overflowStatus, setOverflowStatus] = useState(true); // True = With Scrolling; False = No Scrolling
@@ -40,7 +40,7 @@ function App() {
   }, [])
 
   return (
-    <div className="h-svh w-svw ]">
+    <div className="h-svh w-svw" >
       {!isLoaded && 
         <LoadingScreen onComplete={() => setIsLoaded(true)} />
       }
@@ -93,7 +93,10 @@ function App() {
         number="00"
         title="BERT-Based Sentiment Prediction Model"
         description="I am working with a team to explore the use of emojis from tweet data as initial training data for transformers (e.g., TwHIN-BERT, mBERT, Tagalog-BERT, RoBERTa-Tagalog) that are pre-trained on different domains, applied to sentiment analysis of Philippine text data. To support further research, the best-performing model from our study will be released to the public for experimental use only and is not intended for public deployment."
-        image="/distributedSystem.jpeg"
+        image="/machineLearning.jpeg"
+        hrefFile="Exploring Transformer-based Approaches in Sentiment Prediction of Philippine Tweets.pdf"
+        hrefDownloadName="Exploring Transformer-based Approaches in Sentiment Prediction of Philippine Tweets"
+        hrefText="View Paper"
         reverse={false}
         setNavTitle={setNavTitle}
         setNavTitleColor={setNavTitleColor}
@@ -107,7 +110,10 @@ function App() {
         number="01"
         title="Filbis"
         description="Filbis is a Health Chatbot made by DOST and DLSU under the TE3D ADRiC Research House. The name was derived from the term Fil-Bis that means Filipino-Bisaya."
-        image="/distributedSystem.jpeg"
+        image="/filbisBG.jpeg"
+        hrefFile="https://filbis-v2.vercel.app/"
+        hrefDownloadName="Filbis"
+        hrefText="Try it out"
         reverse={true}
         setNavTitle={setNavTitle}
         setNavTitleColor={setNavTitleColor}
@@ -122,6 +128,9 @@ function App() {
         number="02"
         description="This system is implemented using different microservices distributed across multiple nodes (virtual machines) that are connected within the same network. It has fault tolerance, meaning that if one feature goes down, the rest of the features remain fully functional."
         image="/distributedSystem.jpeg"
+        hrefFile="DistributedSystem_Details.pdf"
+        hrefDownloadName="DistributedSystem_Details"
+        hrefText="Know More"
         reverse={false}
         setNavTitle={setNavTitle}
         setNavTitleColor={setNavTitleColor}
@@ -134,7 +143,10 @@ function App() {
         number="03"
         title="Shuttle Reservation System"
         description="This system aims to improve the existing scheduling process for the Arrows Express Shuttle, which currently relies solely on Google Forms, by introducing innovative features and a user-friendly profile system for easier access. Our goal is to provide a more comfortable and stress-free journey for all passengers by streamlining the booking experience and enhancing overall usability."
-        image="/distributedSystem.jpeg"
+        image="/shuttleReservationBG.jpeg"
+        hrefFile="https://dlsu-shuttle.onrender.com/"
+        hrefDownloadName="DLSU Arrow Express"
+        hrefText="Try it out"
         reverse={true}
         setNavTitle={setNavTitle}
         setNavTitleColor={setNavTitleColor}
@@ -147,7 +159,10 @@ function App() {
         number="04"
         title="PomoPet"
         description="A productivity app that uses the Pomodoro technique with a virtual pet to boost focus, playing study-friendly music during sessions. The pet gains experience, and users can level it up by doing short exercises during breaks."
-        image="/distributedSystem.jpeg"
+        image="/pomoPetBG.jpeg"
+        hrefFile="pomoPet_Details.pdf"
+        hrefDownloadName="PomoPet_Details"
+        hrefText="Know More"
         reverse={false}
         setNavTitle={setNavTitle}
         setNavTitleColor={setNavTitleColor}
@@ -156,6 +171,17 @@ function App() {
         setNavSocialColor={setNavSocialColor}
       />
 
+      {/* End Footer for Projects Section */}
+      <div className="relative bg-[#F0F0F0] h-[5%]">
+        <a href={`https://github.com/mauries-lopez`} target="_blank" className="relative h-full cursor-pointer flex justify-center items-center opacity-60">
+          <div className="relative h-[50%] pl-2 pr-2 flex flex-row justify-center items-center bg-[#1A1A1A] animate-pulse rounded-full">
+              <StackIcon name="github" className="relative h-[60%] filter invert"/>
+              <p className="relative justify-center text-white text-center font-sans font-bold pl-2 pr-2 text-[11px]"> Check out more on my GitHub! </p>
+              <StackIcon name="github" className="relative h-[60%] filter invert"/>
+          </div>
+        </a>
+      </div>
+      
 
       {/*
       {
