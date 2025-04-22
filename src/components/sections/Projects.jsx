@@ -43,10 +43,10 @@ export const Projects = ({title, number, description, image, hrefFile, hrefDownl
                     </div>
                 </div>
                 
-                <div id="image0" className="relative lg:flex h-full w-full 3xs:w-full lg:mask-radial-from-99% lg:mask-radial-[40%_40%] cursor-pointer overflow-hidden " onMouseEnter={learnMoreShow} onMouseLeave={learnMoreHide}>
+                <div id="image0" className="relative lg:flex h-full w-full 3xs:w-full lg:mask-radial-from-99% lg:mask-radial-[40%_40%] overflow-hidden " onMouseEnter={learnMoreShow} onMouseLeave={learnMoreHide}>
                     <div className={`absolute bg-fixed h-full w-full duration-500 bg-cover  scale-100 bg-no-repeat ${learnMoreBool? 'blur-xs':''}`} style={{ backgroundImage: `url(${image})`}} />
-                    <a href={`${hrefFile}`} download={`${hrefDownloadName}`} target="_blank">
-                        <div className={`absolute flex flex-col justify-center items-center h-full w-full bg-[#F0F0F0]/60 duration-500 ${learnMoreBool ? 'opacity-100' : 'opacity-0'}`}>
+                    <a href={`${hrefFile}`} download={`${hrefDownloadName}`} target="_blank" >
+                        <div className={`absolute cursor-pointer flex flex-col justify-center items-center h-full w-full bg-[#F0F0F0]/60 duration-500 3xs:opacity-100 ${learnMoreBool ? 'lg:opacity-100' : 'lg:opacity-0'}`}>
                             <p className="text-5xl font-bold pt-3 text-[#1A1A1A]">{hrefText}</p>
                             <p className="text-[0.7rem] italic pt-3 text-[#1A1A1A]">Image was generated from Meta AI</p>
                         </div>

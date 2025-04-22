@@ -172,7 +172,7 @@ function App() {
       />
 
       {/* End Footer for Projects Section */}
-      <div className="relative bg-[#F0F0F0] h-[5%]">
+      <div className="relative bg-[#F0F0F0] 3xs:h-[20%] md:h-[5%]">
         <a href={`https://github.com/mauries-lopez`} target="_blank" className="relative h-full cursor-pointer flex justify-center items-center opacity-60">
           <div className="relative h-[50%] pl-2 pr-2 flex flex-row justify-center items-center bg-[#1A1A1A] animate-pulse rounded-full">
               <GitHubLight name="github" className="relative h-[60%]"/>

@@ -57,6 +57,13 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
     const [block1Focus, setBlock1Focus] = useState("opacity-100")
     const [block2Focus, setBlock2Focus] = useState("opacity-100")
 
+    // States for icon change during first triggered animation per block
+    // Default:  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+    // Checked:  <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/>
+    const [block0IconActive, setBlock0IconActive] = useState(false)
+    const [block1IconActive, setBlock1IconActive] = useState(false)
+    const [block2IconActive, setBlock2IconActive] = useState(false)
+
     // Section-level styles and effects
     useEffect(() => {
         if (sectionInView) {
@@ -73,15 +80,18 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
     // For slide-in and slide-out of components each block
     useEffect(() => {
         if (block0InView && !block0Bool) {
+            setBlock0IconActive(true);
             setBlock0Bool(true);
         }
 
         if (block1InView && !block1Bool){
             setBlock1Bool(true);
+            setBlock1IconActive(true);
         }
         
         if ( block2InView && !block2Bool){
             setBlock2Bool(true);
+            setBlock2IconActive(true);
         }
             
     }, [block0InView, block0Bool, block1InView, block1Bool, block2InView, block2Bool]);
@@ -134,9 +144,15 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
             {/*<div className="fixed bg-white/50 top-1/2 left-0 w-full h-1 pointer-events-none z-10" /> to view the center of the screen*/}
             <div className="relative h-full w-full flex flex-col">
                 <div ref={setBlock0Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block0Focus}`} >
-                    <div className={`absolute h-full w-full ${block0Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
-                        <div className="flex size-full animate-pulse items-center justify-end" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
-                            <span className="text-[#F0F0F0] text-[8rem] font-bold"> &lt; </span>
+                    <div className={`absolute h-full w-full duration-2000 ${block0Bool ? 'opacity-0' : 'opacity-100'}`}> 
+                        <div className="flex size-full animate-pulse items-center justify-center" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
+                            <svg className="w-50 h-50 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={`${block0IconActive ? 'currentColor' : 'none'}`} viewBox="0 0 24 24">
+                                {block0IconActive ? (
+                                    <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/>
+                                ) : (
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                )}
+                            </svg>
                         </div>
                     </div>
                     <div  className={`relative h-full w-full flex flex-col justify-center text-[#F0F0F0] `}>
@@ -160,9 +176,15 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     <div ref={block0ShadowRef} className={`${block0Shadow} duration-500`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
                 </div>
                 <div ref={setBlock1Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block1Focus}`}>
-                    <div className={`absolute h-full w-full ${block1Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
-                        <div className="flex size-full animate-pulse items-center justify-end" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
-                            <span className="text-[#F0F0F0] text-[8rem] font-bold"> &lt; </span>
+                    <div className={`absolute h-full w-full duration-2000 ${block1Bool ? 'opacity-0' : 'opacity-100'}`}> 
+                        <div className="flex size-full animate-pulse items-center justify-center" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
+                            <svg className="w-50 h-50 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={`${block1IconActive ? 'currentColor' : 'none'}`} viewBox="0 0 24 24">
+                                {block1IconActive ? (
+                                    <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/>
+                                ) : (
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                )}
+                            </svg>
                         </div>
                     </div>
                     <div  className={`relative h-full w-full flex flex-col justify-center text-[#F0F0F0] `}>
@@ -191,9 +213,15 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     <div className={`${block1Shadow} duration-500`} style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}/>
                 </div>
                 <div ref={setBlock2Refs} className={`relative h-full w-full flex flex-row justify-center items-center duration-1000 ${block2Focus}`}>
-                    <div className={`absolute h-full w-full ${block2Bool ? 'animate-block-slide-in opacity-0' : 'opacity-100'}`}> 
-                        <div className="flex size-full animate-pulse items-center justify-end" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
-                            <span className="text-[#F0F0F0] text-[8rem] font-bold"> &lt; </span>
+                    <div className={`absolute h-full w-full duration-2000 ${block2Bool ? 'opacity-0' : 'opacity-100'}`}> 
+                        <div className="flex size-full animate-pulse items-center justify-center" style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "100%", background: "linear-gradient(to right, rgba(255,255,255,0.2), transparent)", pointerEvents: "none"}}>
+                            <svg className="w-50 h-50 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill={`${block1IconActive ? 'currentColor' : 'none'}`} viewBox="0 0 24 24">
+                                {block1IconActive ? (
+                                    <path fill-rule="evenodd" d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm13.707-1.293a1 1 0 0 0-1.414-1.414L11 12.586l-1.793-1.793a1 1 0 0 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l4-4Z" clip-rule="evenodd"/>
+                                ) : (
+                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                )}
+                            </svg>
                         </div>
                     </div>
                     <div  className={`relative h-full w-full flex flex-col justify-center text-[#F0F0F0] `}>
