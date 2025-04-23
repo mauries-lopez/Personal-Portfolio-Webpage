@@ -53,8 +53,12 @@ export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverfl
                         <img src={socialMediaLogo} alt="Social Media Logo" width="50" height="50" className={`cursor-pointer transform transition-transform duration-500 hover:scale-125 `}/>
                     </div>
                     <div className={`absolute top-[100%] flex flex-col justify-center items-center h-30 duration-500 ${socialShowBool ? 'opacity-100' : 'pointer-events-none opacity-0'}`}>
-                        <LinkedIn className={`size-10 mb-3 hover:scale-120 duration-300 cursor-pointer`}/>
-                        <GitHubLight className={`${navSocialColor} size-10 hover:scale-120 duration-300 cursor-pointer`}/>
+                        <a href={`https://www.linkedin.com/in/mauries-lopez/`} target="_blank" >
+                            <LinkedIn className={`size-10 mb-3 hover:scale-120 duration-300 cursor-pointer`}/>
+                        </a>
+                        <a href={`https://github.com/mauries-lopez`} target="_blank" >
+                            <GitHubLight className={`${navSocialColor} size-10 hover:scale-120 duration-300 cursor-pointer`}/>
+                        </a>
                     </div>
                 </div>
             </div>

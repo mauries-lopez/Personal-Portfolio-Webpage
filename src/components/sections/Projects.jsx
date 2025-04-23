@@ -34,16 +34,30 @@ export const Projects = ({title, number, description, image, hrefFile, hrefDownl
             setNavTitleColor("text-[#1A1A1A]");
             setNavBarColor("#F0F0F090"); // Fixed: lowercase 'f' in hex code
             setNavMainMenuBtnColor("bg-[#1A1A1A]");
-            setNavSocialColor("filter invert");
-                
+            setNavSocialColor("filter invert");   
             setNavTitle("03 Projects");
         
             if (projectRef.current.id == "project0"){
-                console.log(projectRef.current.id);
-            } else{
-                console.log("switched");
+                setProject0Bool(true);
+            } else if (projectRef.current.id == "project1") {
+                setProject1Bool(true);
+            } else if (projectRef.current.id == "project2") {
+                setProject2Bool(true);
+            } else if (projectRef.current.id == "project3") {
+                setProject3Bool(true);
+            } else if (projectRef.current.id == "project4") {
+                setProject4Bool(true);
+            } else if (projectRef.current.id == "project5") {
+                setProject5Bool(true);
+            } else {
+                setProject0Bool(false);
+                setProject1Bool(false);
+                setProject2Bool(false);
+                setProject3Bool(false);
+                setProject4Bool(false);
+                setProject5Bool(false);
             }
-            
+
         }
     }, [inView, setNavTitle, hrefFile, hrefDownloadName, hrefText, projectRef]);
 
@@ -51,12 +65,12 @@ export const Projects = ({title, number, description, image, hrefFile, hrefDownl
         <section id={projectId} ref={setProjectNode} className="relative h-lvh w-svw justify-center items-center bg-[#F0F0F0]">
             <div className={`h-full w-full flex 3xs:flex-col ${reverse ? 'md:flex-row-reverse':'md:flex-row'} justify-center items-center`}>
                 <div className="sm:h-full 3xs:h-[50%] w-full flex  justify-center items-center p-3 mt-3 z-10" > 
-                    <div className="h-full w-[90%] flex flex-col justify-center items-start">
+                    <div className="h-full w-[80%] flex flex-col justify-center items-start">
                         <p className="md:text-9xl 3xs:text-6xl font-sans font-bold">{number}</p>
                         <a href={`${hrefFile}`} download={`${hrefDownloadName}`} target="_blank" className="animate-pulse">
                             <p className="md:text-6xl 3xs:text-2xl font-sans font-bold mt-5">{title}</p>
                         </a>
-                        <p className="md:text-xl 3xs:text-md font-sans mt-2 mb-3 overflow-y-auto">{description}</p>
+                        <p className="md:text-xl 3xs:text-md font-sans mt-5 mb-3 overflow-y-auto">{description}</p>
                     </div>
                 </div>
                 
@@ -70,10 +84,17 @@ export const Projects = ({title, number, description, image, hrefFile, hrefDownl
                     </a>
                 </div>
 
-                <div className="3xs:absolute md:hidden h-full w-full ">
-                    <div className={`h-full w-full animate-pulse flex items-center justify-end`} style={{ position: "absolute", bottom: 0, right: 0, height: "100%", width: "20%", pointerEvents: "none"}}>
-                        <svg className="w-[35px] h-[35px] text-gray-800 animate-sideBounce" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <div className="3xs:absolute md:hidden h-full w-full">
+                    <div className={`${project0Bool || project1Bool || project2Bool || project3Bool || project4Bool ? 'opacity-100':'opacity-0'} duration-3000 h-full w-full flex items-center justify-end`} style={{ position: "absolute", bottom: 0, right: 0, height: "100%", width: "20%", pointerEvents: "none"}}>
+                        <svg className={`flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-sideBounceRight`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="m7 16 4-4-4-4m6 8 4-4-4-4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div className="3xs:absolute md:hidden h-full w-full">
+                    <div className={`${project1Bool || project2Bool || project3Bool || project4Bool || project5Bool ? 'opacity-100':'opacity-0'} duration-3000 h-full w-full flex items-center justify-start`} style={{ position: "absolute", bottom: 0, left: 0, height: "100%", width: "20%", pointerEvents: "none"}}>
+                        <svg className={`flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-sideBounceLeft`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m17 16-4-4 4-4m-6 8-4-4 4-4"/>
                         </svg>
                     </div>
                 </div>

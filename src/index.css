@@ -152,7 +152,7 @@ body{
 }
 
 @layer utilities {
-  @keyframes sideBounce {
+  @keyframes sideBounceRight {
     0%, 100% {
       transform: translateX(-25%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
@@ -163,7 +163,22 @@ body{
     }
   }
 
-  .animate-sideBounce {
-    animation: sideBounce 2s infinite;
+  @keyframes sideBounceLeft {
+    0%, 100% {
+      transform: translateX(25%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .animate-sideBounceRight {
+    animation: sideBounceRight 2s infinite;
+  }
+
+  .animate-sideBounceLeft {
+    animation: sideBounceLeft 2s infinite;
   }
 }
