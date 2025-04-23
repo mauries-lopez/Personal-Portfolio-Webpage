@@ -1,9 +1,12 @@
 import socialMediaLogo from '../assets/socialMediaLogo.svg'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import { LinkedIn, GitHubLight } from 'developer-icons';
 
 export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverflowStatus, navTitle, navTitleColor, navBarColor, navMainMenuBtnColor, navSocialColor}) => {
     
+    const [socialShowBool, setSocialShowBool] = useState(false);
+
     function handleHamburgerClick(){
         setCurHamburgerStatus(true);
         // Enable Scrolling
@@ -13,6 +16,10 @@ export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverfl
         }
     }
     
+    function handleSocialButtonClick(){
+        setSocialShowBool(!socialShowBool);
+    }
+
     useEffect( () => {
         
     })
@@ -40,9 +47,15 @@ export const NavigationBar = ({ setCurHamburgerStatus, overflowStatus, setOverfl
                     />
                 </div>
             </div>
-            <div className={`relative h-full w-xs duration-500 ${navSocialColor}`} id="socialMediaPartition">
-                <div className="h-full w-full flex flex-row items-center justify-center ">
-                    <img src={socialMediaLogo} alt="Social Media Logo" width="50" height="50" className={`cursor-pointer transform transition-transform duration-500 hover:scale-125 `}/>
+            <div className={`relative h-full w-xs`} id="socialMediaPartition">
+                <div className="h-full w-full flex flex-col items-center justify-center">
+                    <div className={`duration-500 ${navSocialColor}`} onClick={handleSocialButtonClick}>
+                        <img src={socialMediaLogo} alt="Social Media Logo" width="50" height="50" className={`cursor-pointer transform transition-transform duration-500 hover:scale-125 `}/>
+                    </div>
+                    <div className={`absolute top-[100%] flex flex-col justify-center items-center h-30 duration-500 ${socialShowBool ? 'opacity-100' : 'pointer-events-none opacity-0'}`}>
+                        <LinkedIn className={`size-10 mb-3 hover:scale-120 duration-300 cursor-pointer`}/>
+                        <GitHubLight className={`${navSocialColor} size-10 hover:scale-120 duration-300 cursor-pointer`}/>
+                    </div>
                 </div>
             </div>
         </nav>
