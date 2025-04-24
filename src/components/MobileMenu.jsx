@@ -3,14 +3,14 @@ import {Link} from 'react-scroll'
 
 import './MobileMenu.css'
 
-export const MobileMenu = ({curHamburgerStatus, setCurHamburgerStatus, overflowStatus, setOverflowStatus}) => {
+export const MobileMenu = ({setCurHamburgerStatus, overflowStatus, setOverflowStatus}) => {
 
     const [animateClass, setAnimateClass] = useState("animate-div-slide-out");
-    const [animateBlurryDivClass, setAnimateBlurryDiv] = useState("animate-blurryDiv-fade-in");
+    const [animateBlurryDivClass, setAnimateBlurryDiv] = useState("animate-blurry-div-fade-in");
 
     function handleHamburgerClick() {
         setAnimateClass("animate-div-slide-in"); 
-        setAnimateBlurryDiv("animate-blurryDiv-fade-out");
+        setAnimateBlurryDiv("animate-blurry-div-fade-out");
         
         // Enable Scrolling
         if ( overflowStatus == false ){

@@ -62,9 +62,9 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
             setNavSocialColor("");
 
             setNavTitle("02 Experience");
-            setAnimateAboutBGClass("animate-scaleOut-bg");
+            setAnimateAboutBGClass("animate-scale-out-bg");
         }
-    }, [sectionInView]);
+    }, [sectionInView, setAnimateAboutBGClass, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor, setNavTitle, setNavTitleColor]);
 
     // For slide-in and slide-out of components each block
     useEffect(() => {

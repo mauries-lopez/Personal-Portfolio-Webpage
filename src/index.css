@@ -1,7 +1,6 @@
+@import "tailwindcss";
+
 @layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
 
 html, body {
   position: relative;
@@ -23,30 +22,32 @@ body{
 }
 
 @layer utilities{
-  @keyframes scaleIn{
+  @keyframes scale-in{
     0%{
       transform: scale(1.1);
     }
+
     100%{
       transform: scale(1.0);
     }
   }
 
-  @keyframes scaleOut{
+  @keyframes scale-out{
     0%{
       transform: scale(1.0);
     }
+    
     100%{
       transform: scale(1.1);
     }
   }
 
-  .animate-scaleIn-bg{
-    animation: scaleIn 3s ease-in-out forwards;
+  .animate-scale-in-bg{
+    animation: scale-in 3s ease-in-out forwards;
   }
 
-  .animate-scaleOut-bg{
-    animation: scaleOut 3s forwards;
+  .animate-scale-out-bg{
+    animation: scale-out 3s forwards;
   }
 }
 
@@ -71,9 +72,11 @@ body{
     0%{
       clip-path: circle(90%);
     }
+
     100%{
       clip-path: circle(0%);
     }
+
   }
 
   .animate-swipe{
@@ -82,17 +85,18 @@ body{
 }
 
 @layer utilities {
-  @keyframes fadeIn {
+  @keyframes fade-in {
     0% {
       opacity: 0;
     }
+
     100% {
       opacity: 1;
     }
   }
 
-  .animate-fadeIn-effect {
-    animation: fadeIn 3.5s forwards;
+  .animate-fade-in-effect {
+    animation: fade-in 3.5s forwards;
   }
 }
 
@@ -101,9 +105,11 @@ body{
     0% {
       transform: scale(0);
     }
+
     50% {
       transform: scale(1.05);
     }
+
     100% {
       transform: scale(1);
     }
@@ -127,43 +133,34 @@ body{
   opacity: 1;
 }
 
-@-webkit-keyframes AnimateBG {
+@keyframes animate-bg {
   0% {
     background-position: 0% 50%;
   }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
-@keyframes AnimateBG {
-  0% {
-    background-position: 0% 50%;
-  }
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
 @layer utilities {
-  @keyframes sideBounceRight {
+  @keyframes side-bounce-right {
     0%, 100% {
       transform: translateX(-25%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
+
     50% {
       transform: none;
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
   }
 
-  @keyframes sideBounceLeft {
+  @keyframes side-bounce-left {
     0%, 100% {
       transform: translateX(25%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
@@ -174,46 +171,44 @@ body{
     }
   }
 
-  .animate-sideBounceRight {
-    animation: sideBounceRight 2s infinite;
+  .animate-side-bounce-right {
+    animation: side-bounce-right 2s infinite;
   }
 
-  .animate-sideBounceLeft {
-    animation: sideBounceLeft 2s infinite;
+  .animate-side-bounce-left {
+    animation: side-bounce-left 2s infinite;
   }
 }
 
 .scroll-shadows {
   max-height: 200px;
   overflow: auto;
-
   background:
     /* Shadow Cover TOP */
     linear-gradient(
       #F0F0F0 30%,
-      rgba(255, 255, 255, 0)
+      rgba(255, 255, 255, 0%)
     ) center top,
     
     /* Shadow Cover BOTTOM */
     linear-gradient(
-      rgba(255, 255, 255, 0), 
+      rgba(255, 255, 255, 0%), 
       #F0F0F0  70%
     ) center bottom,
     
     /* Shadow TOP */
     radial-gradient(
       farthest-side at 50% 0,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 40%),
+      rgba(0, 0, 0, 0%)
     ) center top,
     
     /* Shadow BOTTOM */
     radial-gradient(
       farthest-side at 50% 100%,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0)
+      rgba(0, 0, 0, 40%),
+      rgba(0, 0, 0, 0%)
     ) center bottom;
-  
   background-repeat: no-repeat;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
   background-attachment: local, local, scroll, scroll;

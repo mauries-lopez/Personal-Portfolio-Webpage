@@ -1,7 +1,7 @@
-@import "tailwindcss";
+@import url("tailwindcss");
 
 @layer utilities{
-    @keyframes slideOut{
+    @keyframes slide-out{
         0%{
             opacity: 0;
             transform: translateX(-100%);
@@ -13,7 +13,7 @@
         }
       }
       
-      @keyframes slideIn{
+      @keyframes slide-in{
         0%{
             opacity: 1;
             transform: translateX(0%);
@@ -26,10 +26,10 @@
       }
     
       .animate-block-slide-in{
-        animation: slideIn 1.5s ease-in-out forwards;
+        animation: slide-in 1.5s ease-in-out forwards;
       }
     
       .animate-block-slide-out{
-        animation: slideOut 1.6s ease-in-out forwards;
+        animation: slide-out 1.6s ease-in-out forwards;
       }    
 }

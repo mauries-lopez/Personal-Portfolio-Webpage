@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { TypeAnimation } from 'react-type-animation';
 
-export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor} ) => {
+export const About = ( {setNavTitle, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor} ) => {
 
     const [introductionDivName, setIntroductionDivName] = useState("+ Introduction");
     const [introductionDivBtnDisplay, setIntroductionDivBtnDisplay] = useState("block");
@@ -30,10 +30,10 @@ export const About = ( {setNavTitle, animateAboutBGClass, setAnimateAboutBGClass
 
             setNavTitle("01 About Me");
             setTimeout(() => {
-                setAnimateAboutBGClass("animate-scaleIn-bg");
+                setAnimateAboutBGClass("animate-scale-in-bg");
             }, 30);
         }
-    }, [inView, setNavTitle]);
+    }, [inView, setNavTitle, setAnimateAboutBGClass, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor, setNavTitleColor]);
     
 
     function introductionClick(){

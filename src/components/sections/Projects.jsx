@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import { useInView } from "react-intersection-observer";
 
-export const Projects = ({title, number, description, image, hrefFile, hrefDownloadName, hrefText, reverse = false, projectId, projectRef = {}, projectTags, setNavTitle, setAnimateAboutBGClass, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor}) => {
+export const Projects = ({title, number, description, image, hrefFile, hrefDownloadName, hrefText, reverse = false, projectId, projectRef = {}, projectTags, setNavTitle, setNavTitleColor, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor}) => {
 
     const [learnMoreBool, setLearnMoreBool] = useState(false);
 
@@ -54,7 +54,7 @@ export const Projects = ({title, number, description, image, hrefFile, hrefDownl
                 setProject6Bool(true);
             }
         }
-    }, [inView, setNavTitle, hrefFile, hrefDownloadName, hrefText]);
+    }, [inView, setNavTitle, hrefFile, hrefDownloadName, hrefText, projectRef, setNavBarColor, setNavMainMenuBtnColor, setNavSocialColor, setNavTitleColor]);
 
     return (
         <section id={projectId} ref={setProjectNode} className="relative h-lvh w-svw justify-center items-center bg-[#F0F0F0]">
@@ -93,7 +93,7 @@ export const Projects = ({title, number, description, image, hrefFile, hrefDownl
                 {/* Right Arrow */}
                 <div className="3xs:absolute md:hidden h-full w-full">
                     <div className={`${project0Bool || project1Bool || project2Bool || project3Bool || project4Bool || project5Bool ? 'opacity-100':'opacity-0'} duration-3000 h-full w-full flex items-center justify-end`} style={{ position: "absolute", bottom: 0, right: 0, height: "100%", width: "20%", pointerEvents: "none"}}>
-                        <svg className={`flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-sideBounceRight`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <svg className={`flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-side-bounce-right`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="m7 16 4-4-4-4m6 8 4-4-4-4"/>
                         </svg>
                     </div>
@@ -102,7 +102,7 @@ export const Projects = ({title, number, description, image, hrefFile, hrefDownl
                 {/* Left Arrow */}
                 <div className="3xs:absolute md:hidden h-full w-full">
                     <div className={`${project1Bool || project2Bool || project3Bool || project4Bool || project5Bool || project6Bool ? 'opacity-100':'opacity-0'} duration-3000 h-full w-full flex items-center justify-start`} style={{ position: "absolute", bottom: 0, left: 0, height: "100%", width: "20%", pointerEvents: "none"}}>
-                        <svg className={`flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-sideBounceLeft`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <svg className={`flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-side-bounce-left`} aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m17 16-4-4 4-4m-6 8-4-4 4-4"/>
                         </svg>
                     </div>

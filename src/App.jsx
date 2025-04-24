@@ -1,4 +1,3 @@
-import './App.css'
 import "./index.css"
 import { useState, useEffect } from "react";
 import { LoadingScreen } from './components/LoadingScreen';
@@ -24,13 +23,13 @@ function App() {
   const [ navMainMenuBtnColor, setNavMainMenuBtnColor] = useState("bg-[#F0F0F0]");
   const [ navSocialColor, setNavSocialColor] = useState(""); // mix-blend-darken = #1A1A1A
 
-  const { ref: project0Ref, inView: project0View } = useInView({threshold: 0.8});
-  const { ref: project1Ref, inView: project1View } = useInView({threshold: 0.8});
-  const { ref: project2Ref, inView: project2View } = useInView({threshold: 0.8});
-  const { ref: project3Ref, inView: project3View } = useInView({threshold: 0.8});
-  const { ref: project4Ref, inView: project4View } = useInView({threshold: 0.8});
-  const { ref: project5Ref, inView: project5View } = useInView({threshold: 0.8});
-  const { ref: project6Ref, inView: project6View } = useInView({threshold: 0.8});
+  const { ref: project0Ref } = useInView({threshold: 0.8});
+  const { ref: project1Ref } = useInView({threshold: 0.8});
+  const { ref: project2Ref } = useInView({threshold: 0.8});
+  const { ref: project3Ref } = useInView({threshold: 0.8});
+  const { ref: project4Ref } = useInView({threshold: 0.8});
+  const { ref: project5Ref } = useInView({threshold: 0.8});
+  const { ref: project6Ref } = useInView({threshold: 0.8});
 
   const projectTags = [{tag0:'Neural Networks',tag1:'Sentiment Analysis',tag2:'NLP'}, 
                        {tag0:'Web Development',tag1:'TailwindCSS',tag2:'ReactTS'},
