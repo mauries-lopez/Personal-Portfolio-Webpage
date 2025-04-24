@@ -128,8 +128,7 @@ body{
   justify-content: center;
   background-size: 300% 300%;
   background-image: linear-gradient(-45deg, #1A1A1A 0%, #1A1A1A 25%, #F0F0F0 51%, #F0F0F0 100%);
-  -webkit-animation: AnimateBG 20s ease infinite;
-          animation: AnimateBG 20s ease infinite;
+  animation: animate-bg 20s ease infinite;
   opacity: 1;
 }
 
@@ -165,6 +164,7 @@ body{
       transform: translateX(25%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
+
     50% {
       transform: none;
       animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -187,27 +187,27 @@ body{
     /* Shadow Cover TOP */
     linear-gradient(
       #F0F0F0 30%,
-      rgba(255, 255, 255, 0%)
+      rgb(255, 255, 255, 0%)
     ) center top,
     
     /* Shadow Cover BOTTOM */
     linear-gradient(
-      rgba(255, 255, 255, 0%), 
+      rgb(255, 255, 255, 0%), 
       #F0F0F0  70%
     ) center bottom,
     
     /* Shadow TOP */
     radial-gradient(
       farthest-side at 50% 0,
-      rgba(0, 0, 0, 40%),
-      rgba(0, 0, 0, 0%)
+      rgb(0, 0, 0, 40%),
+      rgb(0, 0, 0, 0%)
     ) center top,
     
     /* Shadow BOTTOM */
     radial-gradient(
       farthest-side at 50% 100%,
-      rgba(0, 0, 0, 40%),
-      rgba(0, 0, 0, 0%)
+      rgb(0, 0, 0, 40%),
+      rgb(0, 0, 0, 0%)
     ) center bottom;
   background-repeat: no-repeat;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
