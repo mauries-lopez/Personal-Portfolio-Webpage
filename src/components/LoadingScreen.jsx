@@ -18,7 +18,7 @@ export const LoadingScreen = ({ onComplete }) => {
           onComplete()
         }, 900)
       }
-    }, 150)
+    }, 500)
     return () => clearInterval(interval)
   }, [onComplete])
 
@@ -34,6 +34,11 @@ export const LoadingScreen = ({ onComplete }) => {
       <div className='w-[300px] h-[10px] bg-[#1A1A1A] bg-fixed rounded relative overflow-hidden'>
         <div className='w-[40%] h-full bg-white bg-fixed shadow-[0_0_15px_#3b82f6] animate-loading-bar' />
       </div>
+
+      <div className='w-[70%] text-[#1A1A1A] 3xs:text-sm md:text-lg italic font-sans z-50 flex justify-center items-center text-center mt-7'>
+          <p> Built and deployed using a CI/CD pipeline (GitHub Actions + Netlify).</p>
+      </div>
+      
     </div>
   )
 }

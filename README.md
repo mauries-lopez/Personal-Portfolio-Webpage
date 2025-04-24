@@ -13,6 +13,8 @@ If you are developing a production application, we recommend using TypeScript an
 
 ## Website Overview
 
+Built and deployed a this using a CI/CD pipeline (GitHub Actions + Vercel/Netlify), ensuring automated testing and seamless deployment.
+
 Details
 
 - Javascript
