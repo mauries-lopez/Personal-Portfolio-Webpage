@@ -187,27 +187,27 @@ body{
     /* Shadow Cover TOP */
     linear-gradient(
       #F0F0F0 30%,
-      rgb(255, 255, 255, 0%)
+      rgb(255 255 255 / 0%)
     ) center top,
     
     /* Shadow Cover BOTTOM */
     linear-gradient(
-      rgb(255, 255, 255, 0%), 
+      rgb(255 255 255 / 0%), 
       #F0F0F0  70%
     ) center bottom,
     
     /* Shadow TOP */
     radial-gradient(
       farthest-side at 50% 0,
-      rgb(0, 0, 0, 40%),
-      rgb(0, 0, 0, 0%)
+      rgb(0 0 0 / 40%),
+      rgb(0 0 0 / 0%)
     ) center top,
     
     /* Shadow BOTTOM */
     radial-gradient(
       farthest-side at 50% 100%,
-      rgb(0, 0, 0, 40%),
-      rgb(0, 0, 0, 0%)
+      rgb(0 0 0 / 40%),
+      rgb(0 0 0 / 0%)
     ) center bottom;
   background-repeat: no-repeat;
   background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
