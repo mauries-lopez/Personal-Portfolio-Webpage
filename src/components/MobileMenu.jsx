@@ -39,11 +39,11 @@ export const MobileMenu = ({curHamburgerStatus, setCurHamburgerStatus, overflowS
                                 <li className="hover:underline cursor-pointer"> About Me </li>
                             </Link>
 
-                            <Link to="experience" spy={true} smooth={true} offset={window.innerWidth < 640 ? -50 : -170} duration={800} onClick={() => {handleHamburgerClick()}}>
+                            <Link to="experience" spy={true} smooth={true} offset={window.innerWidth < 640 ? -50 : -80} duration={800} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Experience </li>
                             </Link>
 
-                            <Link to="projects" spy={true} smooth={true} offset={0} duration={800} onClick={() => {handleHamburgerClick()}}>
+                            <Link to="project0" spy={true} smooth={true} offset={window.innerWidth < 640 ? -30 : 0} duration={800} onClick={() => {handleHamburgerClick()}}>
                                 <li className="hover:underline cursor-pointer"> Projects </li>
                             </Link>
 

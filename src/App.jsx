@@ -30,6 +30,15 @@ function App() {
   const { ref: project3Ref, inView: project3View } = useInView({threshold: 0.8});
   const { ref: project4Ref, inView: project4View } = useInView({threshold: 0.8});
   const { ref: project5Ref, inView: project5View } = useInView({threshold: 0.8});
+  const { ref: project6Ref, inView: project6View } = useInView({threshold: 0.8});
+
+  const projectTags = [{tag0:'Neural Networks',tag1:'Sentiment Analysis',tag2:'NLP'}, 
+                       {tag0:'Web Development',tag1:'TailwindCSS',tag2:'ReactTS'},
+                       {tag0:'Web Development',tag1:'Microservices',tag2:'Distributed System'},
+                       {tag0:'Multithreading',tag1:'Thread Synchronization',tag2:'Socket Programming'},
+                       {tag0:'Web Development',tag1:'MongoDB',tag2:'Bcrypt'},
+                       {tag0:'Mobile Application',tag1:'Android Studio',tag2:'Services/APIs'},
+                       {tag0:'Web Development',tag1:'YouTube Data API',tag2:'Media Queries'},]
 
   // Background Animation
   const [animateAboutBGClass, setAnimateAboutBGClass] = useState("");
@@ -110,6 +119,7 @@ function App() {
             reverse={false}
             projectId="project0"
             projectRef={project0Ref}
+            projectTags={projectTags[0]}
             setNavTitle={setNavTitle}
             setNavTitleColor={setNavTitleColor}
             setNavBarColor={setNavBarColor}
@@ -130,6 +140,7 @@ function App() {
             reverse={true}
             projectId="project1"
             projectRef={project1Ref}
+            projectTags={projectTags[1]}
             setNavTitle={setNavTitle}
             setNavTitleColor={setNavTitleColor}
             setNavBarColor={setNavBarColor}
@@ -150,6 +161,7 @@ function App() {
             reverse={false}
             projectId="project2"
             projectRef={project2Ref}
+            projectTags={projectTags[2]}
             setNavTitle={setNavTitle}
             setNavTitleColor={setNavTitleColor}
             setNavBarColor={setNavBarColor}
@@ -170,6 +182,7 @@ function App() {
             reverse={true}
             projectId="project3"
             projectRef={project3Ref}
+            projectTags={projectTags[3]}
             setNavTitle={setNavTitle}
             setNavTitleColor={setNavTitleColor}
             setNavBarColor={setNavBarColor}
@@ -190,6 +203,7 @@ function App() {
             reverse={false}
             projectId="project4"
             projectRef={project4Ref}
+            projectTags={projectTags[4]}
             setNavTitle={setNavTitle}
             setNavTitleColor={setNavTitleColor}
             setNavBarColor={setNavBarColor}
@@ -210,6 +224,28 @@ function App() {
             reverse={true}
             projectId="project5"
             projectRef={project5Ref}
+            projectTags={projectTags[5]}
+            setNavTitle={setNavTitle}
+            setNavTitleColor={setNavTitleColor}
+            setNavBarColor={setNavBarColor}
+            setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+            setNavSocialColor={setNavSocialColor}
+          />
+        </div>
+
+        <div ref={project6Ref} className="h-full min-w-full snap-center snap-always">
+          <Projects
+            number="06"
+            title="YouTuber Space"
+            description="A web-based platform designed to promote YouTubers and make it easier for their audience to discover, browse, and enjoy their content in one centralized space. The website integrates the YouTube Data API to fetch real-time information from creators’ channels, including their latest uploads, playlists, channel statistics, and more."
+            image="/kadaCraftBG.jpeg"
+            hrefFile="https://kadacraft.onrender.com/"
+            hrefDownloadName="KadaCraft"
+            hrefText="Try it out"
+            reverse={false}
+            projectId="project6"
+            projectRef={project6Ref}
+            projectTags={projectTags[6]}
             setNavTitle={setNavTitle}
             setNavTitleColor={setNavTitleColor}
             setNavBarColor={setNavBarColor}

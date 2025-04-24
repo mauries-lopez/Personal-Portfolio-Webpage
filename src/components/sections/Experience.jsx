@@ -13,20 +13,9 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
     const { ref: block2Ref, inView: block2InView } = useInView({ threshold: 0.9 });
 
     // Refs for each block: white shadow
-    const { ref: block0ShadowRef, inView: blockShadow0InView } = useInView({
-        threshold: 0,
-        rootMargin: "-50% 0px -50% 0px",
-    });
-      
-    const { ref: block1ShadowRef, inView: blockShadow1InView } = useInView({
-        threshold: 0,
-        rootMargin: "-50% 0px -50% 0px",
-    });
-      
-    const { ref: block2ShadowRef, inView: blockShadow2InView } = useInView({
-        threshold: 0,
-        rootMargin: "-50% 0px -50% 0px",
-    });
+    const { ref: block0ShadowRef, inView: blockShadow0InView } = useInView({ threshold: 0.9});
+    const { ref: block1ShadowRef, inView: blockShadow1InView } = useInView({threshold: 0.9});
+    const { ref: block2ShadowRef, inView: blockShadow2InView } = useInView({threshold: 0.9});
     
     // Combination of both references
     const setBlock0Refs = (node) => {
@@ -68,7 +57,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
     useEffect(() => {
         if (sectionInView) {
             setNavTitleColor("text-[#F0F0F0]");
-            setNavBarColor("#1A1A1A90");
+            setNavBarColor("#1A1A1A");
             setNavMainMenuBtnColor("bg-white");
             setNavSocialColor("");
 
@@ -157,7 +146,7 @@ export const Experience = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleCol
                     </div>
                     <div  className={`relative h-full w-full flex flex-col justify-center text-[#F0F0F0] `}>
                         <div id="block-0" className={`m-10  ${block0Bool ? 'animate-block-slide-out opacity-100' : 'animate-block-slide-in opacity-0'}`}>
-                            <p className="md:text-6xl sm:text-4xl 3xs:text-2xl font-sans font-bold">Research Assistant</p>
+                            <p className="md:text-6xl sm:text-4xl 3xs:text-2xl font-sans font-bold ">Research Assistant</p>
                             <a href="https://adric.dlsu.edu.ph/index.php/technology-education-entertainment-empathy-design-te3d-house/" target="_blank" rel="noopener noreferrer">
                                 <p className="md:text-2xl sm:text-xl 3xs:text-lg font-sans italic animate-pulse pt-3">De La Salle University - TE3D House</p>
                             </a>
