@@ -8,6 +8,8 @@ on:
     branches:
       - staging
 
+permissions: read-all
+
 jobs:
   super-lint:
     name: Lint code base
@@ -15,6 +17,7 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
+      
       - name: Run Super-Linter
         uses: super-linter/super-linter@v7.1.0
         env:
