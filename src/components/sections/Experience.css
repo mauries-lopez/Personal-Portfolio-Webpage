@@ -1,35 +1,35 @@
 @import url("tailwindcss");
 
-@layer utilities{
-    @keyframes slide-out{
-        0%{
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-    
-        100%{
-            opacity: 1;
-            transform: translateX(0%);
-        }
-      }
-      
-      @keyframes slide-in{
-        0%{
-            opacity: 1;
-            transform: translateX(0%);
-        }
-    
-        100%{
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-      }
-    
-      .animate-block-slide-in{
-        animation: slide-in 1.5s ease-in-out forwards;
-      }
-    
-      .animate-block-slide-out{
-        animation: slide-out 1.6s ease-in-out forwards;
-      }    
+@layer utilities {
+  @keyframes slide-out {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slide-in {
+    0% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+
+    100% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-block-slide-in {
+    animation: slide-in 1.5s ease-in-out forwards;
+  }
+
+  .animate-block-slide-out {
+    animation: slide-out 1.6s ease-in-out forwards;
+  }
 }

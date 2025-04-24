@@ -4,7 +4,8 @@
 
 @layer theme, base, components, utilities;
 
-html, body {
+html,
+body {
   position: relative;
   margin: 0;
   padding: 0;
@@ -15,7 +16,7 @@ html, body {
   caret-color: transparent;
 }
 
-body{
+body {
   overflow-x: hidden;
 }
 
@@ -25,38 +26,38 @@ body{
 }
 /* stylelint-enable */
 
-@layer utilities{
-  @keyframes scale-in{
-    0%{
+@layer utilities {
+  @keyframes scale-in {
+    0% {
       transform: scale(1.1);
     }
 
-    100%{
-      transform: scale(1.0);
+    100% {
+      transform: scale(1);
     }
   }
 
-  @keyframes scale-out{
-    0%{
-      transform: scale(1.0);
+  @keyframes scale-out {
+    0% {
+      transform: scale(1);
     }
-    
-    100%{
+
+    100% {
       transform: scale(1.1);
     }
   }
 
-  .animate-scale-in-bg{
+  .animate-scale-in-bg {
     animation: scale-in 3s ease-in-out forwards;
   }
 
-  .animate-scale-out-bg{
+  .animate-scale-out-bg {
     animation: scale-out 3s forwards;
   }
 }
 
-@layer utilities{
-  @keyframes loading{
+@layer utilities {
+  @keyframes loading {
     0% {
       transform: translateX(-100%);
     }
@@ -66,25 +67,24 @@ body{
     }
   }
 
-.animate-loading-bar{
+  .animate-loading-bar {
     animation: loading 0.8s ease infinite;
   }
 }
 
-@layer utilities{
-  @keyframes swipe{
-    0%{
+@layer utilities {
+  @keyframes swipe {
+    0% {
       clip-path: circle(90%);
     }
 
-    100%{
+    100% {
       clip-path: circle(0%);
     }
-
   }
 
-  .animate-swipe{
-    animation: swipe 1s cubic-bezier(0.25,0.1,0.25,1);
+  .animate-swipe {
+    animation: swipe 1s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 }
 
@@ -131,7 +131,13 @@ body{
   align-items: center;
   justify-content: center;
   background-size: 300% 300%;
-  background-image: linear-gradient(-45deg, #1A1A1A 0%, #1A1A1A 25%, #F0F0F0 51%, #F0F0F0 100%);
+  background-image: linear-gradient(
+    -45deg,
+    #1a1a1a 0%,
+    #1a1a1a 25%,
+    #f0f0f0 51%,
+    #f0f0f0 100%
+  );
   animation: animate-bg 20s ease infinite;
   opacity: 1;
 }
@@ -152,7 +158,8 @@ body{
 
 @layer utilities {
   @keyframes side-bounce-right {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateX(-25%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
@@ -164,7 +171,8 @@ body{
   }
 
   @keyframes side-bounce-left {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateX(25%);
       animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
@@ -189,31 +197,24 @@ body{
   overflow: auto;
   background:
     /* Shadow Cover TOP */
-    linear-gradient(
-      #F0F0F0 30%,
-      rgb(255 255 255 / 0%)
-    ) center top,
-    
+    linear-gradient(#f0f0f0 30%, rgb(255 255 255 / 0%)) center top,
     /* Shadow Cover BOTTOM */
-    linear-gradient(
-      rgb(255 255 255 / 0%), 
-      #F0F0F0  70%
-    ) center bottom,
-    
+      linear-gradient(rgb(255 255 255 / 0%), #f0f0f0 70%) center bottom,
     /* Shadow TOP */
-    radial-gradient(
-      farthest-side at 50% 0,
-      rgb(0 0 0 / 40%),
-      rgb(0 0 0 / 0%)
-    ) center top,
-    
+      radial-gradient(farthest-side at 50% 0, rgb(0 0 0 / 40%), rgb(0 0 0 / 0%))
+      center top,
     /* Shadow BOTTOM */
-    radial-gradient(
-      farthest-side at 50% 100%,
-      rgb(0 0 0 / 40%),
-      rgb(0 0 0 / 0%)
-    ) center bottom;
+      radial-gradient(
+        farthest-side at 50% 100%,
+        rgb(0 0 0 / 40%),
+        rgb(0 0 0 / 0%)
+      )
+      center bottom;
   background-repeat: no-repeat;
-  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-size:
+    100% 40px,
+    100% 40px,
+    100% 14px,
+    100% 14px;
   background-attachment: local, local, scroll, scroll;
 }

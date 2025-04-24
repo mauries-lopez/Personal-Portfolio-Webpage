@@ -1,62 +1,62 @@
 /* stylelint-disable-next-line import-notation */
 @import "tailwindcss";
 
-@layer utilities{
-    @keyframes slide-out{
-      0%{
-        transform: translateX(-100%);
-      }
-  
-      100%{
-        transform: translateX(0%);
-      }
+@layer utilities {
+  @keyframes slide-out {
+    0% {
+      transform: translateX(-100%);
     }
-    
-    @keyframes slide-in{
-      0%{
-        transform: translateX(0%);
-      }
-  
-      100%{
-        transform: translateX(-100%);
-      }
-    }
-  
-    .animate-div-slide-in{
-      animation: slide-in 0.5s ease-out forwards;
-    }
-  
-    .animate-div-slide-out{
-      animation: slide-out 0.5s ease-out forwards;
+
+    100% {
+      transform: translateX(0%);
     }
   }
-  
-  @layer utilities {
-    @keyframes fade-in {
-      0% {
-        opacity: 0;
-      }
 
-      100% {
-        opacity: 0.7;
-      }
+  @keyframes slide-in {
+    0% {
+      transform: translateX(0%);
     }
-  
-    @keyframes fade-out {
-      0% {
-        opacity: 0.7;
-      }
 
-      100% {
-        opacity: 0;
-      }
-    }
-  
-    .animate-blurry-div-fade-in {
-      animation: fade-in 0.5s ease-out forwards;
-    }
-  
-    .animate-blurry-div-fade-out {
-      animation: fade-out 0.5s ease-out forwards;
+    100% {
+      transform: translateX(-100%);
     }
   }
+
+  .animate-div-slide-in {
+    animation: slide-in 0.5s ease-out forwards;
+  }
+
+  .animate-div-slide-out {
+    animation: slide-out 0.5s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0.7;
+    }
+  }
+
+  @keyframes fade-out {
+    0% {
+      opacity: 0.7;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .animate-blurry-div-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  .animate-blurry-div-fade-out {
+    animation: fade-out 0.5s ease-out forwards;
+  }
+}
