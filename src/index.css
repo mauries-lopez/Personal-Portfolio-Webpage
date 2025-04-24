@@ -1,4 +1,6 @@
-@import url("tailwindcss");
+/* stylelint-disable */
+@import "tailwindcss";
+/* stylelint-enable */
 
 @layer theme, base, components, utilities;
 
@@ -17,9 +19,11 @@ body{
   overflow-x: hidden;
 }
 
+/* stylelint-disable */
 @theme {
   --breakpoint-3xs: 1rem;
 }
+/* stylelint-enable */
 
 @layer utilities{
   @keyframes scale-in{
