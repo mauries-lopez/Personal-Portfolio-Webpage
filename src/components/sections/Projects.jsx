@@ -37,14 +37,6 @@ export const Projects = ({title, number, description, image, hrefFile, hrefDownl
             setNavMainMenuBtnColor("bg-[#1A1A1A]");
             setNavSocialColor("filter invert");   
             setNavTitle("03 Projects");
-
-            setProject0Bool(false);
-            setProject1Bool(false);
-            setProject2Bool(false);
-            setProject3Bool(false);
-            setProject4Bool(false);
-            setProject5Bool(false);
-            setProject6Bool(false);
         
             if (projectRef.current.id == "project0"){
                 setProject0Bool(true);
