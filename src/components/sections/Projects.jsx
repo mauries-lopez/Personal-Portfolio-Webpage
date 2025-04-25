@@ -171,6 +171,7 @@ export const Projects = ({
             }}
           >
             <svg
+              id="right-arrow"
               className="flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-side-bounce-right"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
@@ -204,6 +205,7 @@ export const Projects = ({
             }}
           >
             <svg
+              id="left-arrow"
               className="flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-side-bounce-left"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
