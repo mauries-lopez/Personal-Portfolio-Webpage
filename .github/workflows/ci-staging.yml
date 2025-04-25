@@ -18,7 +18,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4.2.2
 
-      - name: Run Super-Linter
+      - name: Run Mega-Linter
         uses: oxsecurity/megalinter@v8.5.0
         env:
           DEFAULT_BRANCH: staging
