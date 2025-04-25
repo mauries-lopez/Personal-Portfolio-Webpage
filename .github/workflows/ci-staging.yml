@@ -24,3 +24,5 @@ jobs:
         env:
           DEFAULT_BRANCH: staging
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORT_OUTPUT: true
+          OUTPUT_FOLDER: .
