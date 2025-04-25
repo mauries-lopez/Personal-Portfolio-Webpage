@@ -1,3 +1,4 @@
+---
 name: MegaLinter
 
 on:
@@ -8,7 +9,7 @@ on:
     branches:
       - staging
 
-permissions: read-all
+permissions: read-all # yaml-lint-disable-line truthy
 
 jobs:
   super-lint:
