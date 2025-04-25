@@ -1,0 +1,17 @@
+{
+  "dictionaryDefinitions": [
+    {
+      "name": "custom",
+      "words": [
+        "vite",
+        "Salle",
+        "DLSU",
+        "mauries",
+        "Lopez",
+        "De La Salle University"
+      ]
+    }
+  ],
+  "dictionaries": ["custom"],
+  "ignorePaths": ["node_modules/**/*", "*.min.js", "*.css"]
+}

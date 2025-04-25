@@ -1,0 +1,28 @@
+---
+name: MegaLinter
+
+on:
+  push:
+    branches:
+      - staging
+  pull_request:
+    branches:
+      - staging
+
+permissions: read-all # yamllint-disable-line truthy
+
+jobs:
+  super-lint:
+    name: Lint code base
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+
+      - name: Run Mega-Linter
+        uses: oxsecurity/megalinter@146333030da68e2e58c6ff826633824fabe01eaf
+        env:
+          DEFAULT_BRANCH: staging
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPORT_OUTPUT: true
+          OUTPUT_FOLDER: .
