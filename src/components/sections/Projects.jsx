@@ -186,6 +186,7 @@ export const Projects = ({
                 strokeLinejoin="round"
                 strokeWidth="2.2"
                 d="m7 16 4-4-4-4m6 8 4-4-4-4"
+                /* Right-facing arrow */
               />
             </svg>
           </div>
@@ -220,6 +221,7 @@ export const Projects = ({
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="m17 16-4-4 4-4m-6 8-4-4 4-4"
+                /* Left-facing arrow */
               />
             </svg>
           </div>

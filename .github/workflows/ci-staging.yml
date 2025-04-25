@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: Run Mega-Linter
-        uses: oxsecurity/megalinter@v8.5.0
+        uses: oxsecurity/megalinter@146333030da68e2e58c6ff826633824fabe01eaf
         env:
           DEFAULT_BRANCH: staging
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
