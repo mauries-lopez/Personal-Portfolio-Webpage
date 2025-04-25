@@ -23,4 +23,4 @@ jobs:
         env:
           DEFAULT_BRANCH: staging
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          LINTERS: checkov css css_prettier github_actions gitleaks git_merge_conflict_markers html html_prettier javascript_prettier json_prettier jsx_prettier markdown markdown_prettier natural_language yaml yaml_prettier
+          DISABLED_LINTERS: JAVASCRIPT_ES JAVASCRIPT_STANDARD JSON JSX
