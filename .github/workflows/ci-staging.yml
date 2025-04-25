@@ -1,4 +1,4 @@
-name: Super-Linter
+name: MegaLinter
 
 on:
   push:
@@ -19,8 +19,7 @@ jobs:
         uses: actions/checkout@v4.2.2
 
       - name: Run Super-Linter
-        uses: super-linter/super-linter@v7.3.0
+        uses: oxsecurity/megalinter@v8.5.0
         env:
           DEFAULT_BRANCH: staging
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DISABLED_LINTERS: JAVASCRIPT_ES JAVASCRIPT_STANDARD JSON JSX
