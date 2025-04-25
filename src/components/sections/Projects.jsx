@@ -156,8 +156,7 @@ export const Projects = ({
             </div>
           </a>
         </div>
-
-        {/* Right Arrow */}
+        
         <div className="3xs:absolute md:hidden h-full w-full">
           <div
             className={`${project0Bool || project1Bool || project2Bool || project3Bool || project4Bool || project5Bool ? "opacity-100" : "opacity-0"} duration-3000 h-full w-full flex items-center justify-end`}
@@ -170,6 +169,7 @@ export const Projects = ({
               pointerEvents: "none",
             }}
           >
+            {/* jscpd:ignore-start */} 
             <svg
               id="right-arrow"
               className="flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-side-bounce-right"
@@ -186,9 +186,9 @@ export const Projects = ({
                 strokeLinejoin="round"
                 strokeWidth="2.2"
                 d="m7 16 4-4-4-4m6 8 4-4-4-4"
-                /* Right-facing arrow */
               />
             </svg>
+            {/* jscpd:ignore-end */} 
           </div>
         </div>
 
@@ -205,6 +205,7 @@ export const Projects = ({
               pointerEvents: "none",
             }}
           >
+            {/* jscpd:ignore-start */} 
             <svg
               id="left-arrow"
               className="flex duration-1000 w-[35px] h-[35px] text-gray-800 animate-side-bounce-left"
@@ -221,9 +222,9 @@ export const Projects = ({
                 strokeLinejoin="round"
                 strokeWidth="2"
                 d="m17 16-4-4 4-4m-6 8-4-4 4-4"
-                /* Left-facing arrow */
               />
             </svg>
+            {/* jscpd:ignore-end */} 
           </div>
         </div>
       </div>

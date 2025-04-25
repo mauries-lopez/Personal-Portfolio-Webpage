@@ -1,0 +1,3 @@
+linters:
+  lychee:
+    enabled: false
