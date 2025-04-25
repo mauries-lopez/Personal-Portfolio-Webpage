@@ -1,22 +1,22 @@
-import { useEffect } from 'react'
-import { useInView } from 'react-intersection-observer'
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 export const TechStack = ({ setNavTitle }) => {
   const { ref, inView } = useInView({
-    threshold: 0.9
-  })
+    threshold: 0.9,
+  });
 
   useEffect(() => {
     if (inView) {
-      setNavTitle('04 Tech Stack')
+      setNavTitle("04 Tech Stack");
     }
-  }, [inView, setNavTitle])
+  }, [inView, setNavTitle]);
 
   return (
     <section
-      id='tech-stack'
+      id="tech-stack"
       ref={ref}
-      className='animate-show relative h-svh w-dvw top-0 bg-blue-500 flex justify-center items-center'
+      className="animate-show relative h-svh w-dvw top-0 bg-blue-500 flex justify-center items-center"
     />
-  )
-}
+  );
+};

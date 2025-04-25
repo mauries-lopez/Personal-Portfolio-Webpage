@@ -1,81 +1,81 @@
-import './index.css'
-import { useState, useEffect } from 'react'
-import { LoadingScreen } from './components/LoadingScreen'
-import { NavigationBar } from './components/NavigationBar'
-import { MobileMenu } from './components/MobileMenu'
-import { About } from './components/sections/About'
-import { Projects } from './components/sections/Projects'
+import "./index.css";
+import { useState, useEffect } from "react";
+import { LoadingScreen } from "./components/LoadingScreen";
+import { NavigationBar } from "./components/NavigationBar";
+import { MobileMenu } from "./components/MobileMenu";
+import { About } from "./components/sections/About";
+import { Projects } from "./components/sections/Projects";
 // import { TechStack } from './components/sections/TechStack'
-import { Experience } from './components/sections/Experience'
+import { Experience } from "./components/sections/Experience";
 // import { Contact } from './components/sections/Contact'
-import Lenis from 'lenis'
-import { GitHubLight } from 'developer-icons'
-import { useInView } from 'react-intersection-observer'
+import Lenis from "lenis";
+import { GitHubLight } from "developer-icons";
+import { useInView } from "react-intersection-observer";
 
-function App () {
-  const [isLoaded, setIsLoaded] = useState(false)
-  const [curHamburgerStatus, setCurHamburgerStatus] = useState(false)
-  const [overflowStatus, setOverflowStatus] = useState(true) // True = With Scrolling; False = No Scrolling
+function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [curHamburgerStatus, setCurHamburgerStatus] = useState(false);
+  const [overflowStatus, setOverflowStatus] = useState(true); // True = With Scrolling; False = No Scrolling
 
-  const [navTitle, setNavTitle] = useState('Section Title')
-  const [navTitleColor, setNavTitleColor] = useState('text-white')
-  const [navBarColor, setNavBarColor] = useState('#1A1A1A')
+  const [navTitle, setNavTitle] = useState("Section Title");
+  const [navTitleColor, setNavTitleColor] = useState("text-white");
+  const [navBarColor, setNavBarColor] = useState("#1A1A1A");
   const [navMainMenuBtnColor, setNavMainMenuBtnColor] =
-    useState('bg-[#F0F0F0]')
-  const [navSocialColor, setNavSocialColor] = useState('') // mix-blend-darken = #1A1A1A
+    useState("bg-[#F0F0F0]");
+  const [navSocialColor, setNavSocialColor] = useState(""); // mix-blend-darken = #1A1A1A
 
-  const { ref: project0Ref } = useInView({ threshold: 0.8 })
-  const { ref: project1Ref } = useInView({ threshold: 0.8 })
-  const { ref: project2Ref } = useInView({ threshold: 0.8 })
-  const { ref: project3Ref } = useInView({ threshold: 0.8 })
-  const { ref: project4Ref } = useInView({ threshold: 0.8 })
-  const { ref: project5Ref } = useInView({ threshold: 0.8 })
-  const { ref: project6Ref } = useInView({ threshold: 0.8 })
+  const { ref: project0Ref } = useInView({ threshold: 0.8 });
+  const { ref: project1Ref } = useInView({ threshold: 0.8 });
+  const { ref: project2Ref } = useInView({ threshold: 0.8 });
+  const { ref: project3Ref } = useInView({ threshold: 0.8 });
+  const { ref: project4Ref } = useInView({ threshold: 0.8 });
+  const { ref: project5Ref } = useInView({ threshold: 0.8 });
+  const { ref: project6Ref } = useInView({ threshold: 0.8 });
 
   const projectTags = [
-    { tag0: 'Neural Networks', tag1: 'Sentiment Analysis', tag2: 'NLP' },
-    { tag0: 'Web Development', tag1: 'TailwindCSS', tag2: 'ReactTS' },
+    { tag0: "Neural Networks", tag1: "Sentiment Analysis", tag2: "NLP" },
+    { tag0: "Web Development", tag1: "TailwindCSS", tag2: "ReactTS" },
     {
-      tag0: 'Web Development',
-      tag1: 'Microservices',
-      tag2: 'Distributed System'
+      tag0: "Web Development",
+      tag1: "Microservices",
+      tag2: "Distributed System",
     },
     {
-      tag0: 'Multithreading',
-      tag1: 'Thread Synchronization',
-      tag2: 'Socket Programming'
+      tag0: "Multithreading",
+      tag1: "Thread Synchronization",
+      tag2: "Socket Programming",
     },
-    { tag0: 'Web Development', tag1: 'MongoDB', tag2: 'Bcrypt' },
+    { tag0: "Web Development", tag1: "MongoDB", tag2: "Bcrypt" },
     {
-      tag0: 'Mobile Application',
-      tag1: 'Android Studio',
-      tag2: 'Services/APIs'
+      tag0: "Mobile Application",
+      tag1: "Android Studio",
+      tag2: "Services/APIs",
     },
     {
-      tag0: 'Web Development',
-      tag1: 'YouTube Data API',
-      tag2: 'Media Queries'
-    }
-  ]
+      tag0: "Web Development",
+      tag1: "YouTube Data API",
+      tag2: "Media Queries",
+    },
+  ];
 
   // Background Animation
-  const [animateAboutBGClass, setAnimateAboutBGClass] = useState('')
+  const [animateAboutBGClass, setAnimateAboutBGClass] = useState("");
 
   useEffect(() => {
     // Initialize Lenis
-    const lenis = new Lenis()
+    const lenis = new Lenis();
 
     // Use requestAnimationFrame to continuously update the scroll
-    function raf (time) {
-      lenis.raf(time)
-      window.requestAnimationFrame(raf)
+    function raf(time) {
+      lenis.raf(time);
+      window.requestAnimationFrame(raf);
     }
 
-    window.requestAnimationFrame(raf)
-  }, [])
+    window.requestAnimationFrame(raf);
+  }, []);
 
   return (
-    <div className={`h-svh w-svw ${isLoaded ? '' : 'overflow-hidden'}`}>
+    <div className={`h-svh w-svw ${isLoaded ? "" : "overflow-hidden"}`}>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
 
       <NavigationBar
@@ -116,18 +116,18 @@ function App () {
         setNavSocialColor={setNavSocialColor}
       />
 
-      <div className='relative flex 3xs:flex-row md:flex-col 3xs:snap-x md:snap-none 3xs:snap-mandatory md:overflow-x-hidden 3xs:overflow-x-auto md:whitespace-normal 3xs:whitespace-break-spaces'>
-        <div className='h-full w-full snap-center snap-always '>
+      <div className="relative flex 3xs:flex-row md:flex-col 3xs:snap-x md:snap-none 3xs:snap-mandatory md:overflow-x-hidden 3xs:overflow-x-auto md:whitespace-normal 3xs:whitespace-break-spaces">
+        <div className="h-full w-full snap-center snap-always ">
           <Projects
-            number='00'
-            title='BERT-Based Sentiment Prediction Model'
-            description='I am working with a team to explore the use of emojis from tweet data as initial training data for transformers (e.g., TwHIN-BERT, mBERT, Tagalog-BERT, RoBERTa-Tagalog) that are pre-trained on different domains, applied to sentiment analysis of Philippine text data. To support further research, the best-performing model from our study will be released to the public for experimental use only and is not intended for public deployment.'
-            image='/machineLearning.jpeg'
-            hrefFile='Exploring Transformer-based Approaches in Sentiment Prediction of Philippine Tweets.pdf'
-            hrefDownloadName='Exploring Transformer-based Approaches in Sentiment Prediction of Philippine Tweets'
-            hrefText='View Paper'
+            number="00"
+            title="BERT-Based Sentiment Prediction Model"
+            description="I am working with a team to explore the use of emojis from tweet data as initial training data for transformers (e.g., TwHIN-BERT, mBERT, Tagalog-BERT, RoBERTa-Tagalog) that are pre-trained on different domains, applied to sentiment analysis of Philippine text data. To support further research, the best-performing model from our study will be released to the public for experimental use only and is not intended for public deployment."
+            image="/machineLearning.jpeg"
+            hrefFile="Exploring Transformer-based Approaches in Sentiment Prediction of Philippine Tweets.pdf"
+            hrefDownloadName="Exploring Transformer-based Approaches in Sentiment Prediction of Philippine Tweets"
+            hrefText="View Paper"
             reverse={false}
-            projectId='project0'
+            projectId="project0"
             projectRef={project0Ref}
             projectTags={projectTags[0]}
             setNavTitle={setNavTitle}
@@ -140,18 +140,18 @@ function App () {
 
         <div
           ref={project1Ref}
-          className='h-full min-w-full snap-center snap-always'
+          className="h-full min-w-full snap-center snap-always"
         >
           <Projects
-            number='01'
-            title='Filbis'
-            description='Filbis is a Health Chatbot made by DOST and DLSU under the TE3D ADRiC Research House. The name was derived from the term Fil-Bis that means Filipino-Bisaya.'
-            image='/filbisBG.jpeg'
-            hrefFile='https://filbis-v2.vercel.app/'
-            hrefDownloadName='Filbis'
-            hrefText='Try it out'
+            number="01"
+            title="Filbis"
+            description="Filbis is a Health Chatbot made by DOST and DLSU under the TE3D ADRiC Research House. The name was derived from the term Fil-Bis that means Filipino-Bisaya."
+            image="/filbisBG.jpeg"
+            hrefFile="https://filbis-v2.vercel.app/"
+            hrefDownloadName="Filbis"
+            hrefText="Try it out"
             reverse
-            projectId='project1'
+            projectId="project1"
             projectRef={project1Ref}
             projectTags={projectTags[1]}
             setNavTitle={setNavTitle}
@@ -164,18 +164,18 @@ function App () {
 
         <div
           ref={project2Ref}
-          className='h-full min-w-full snap-center snap-always'
+          className="h-full min-w-full snap-center snap-always"
         >
           <Projects
-            title='Online Enrollment System with Microservices Architecture'
-            number='02'
-            description='This system is implemented using multiple microservices distributed across several nodes (virtual machines) that are connected within the same network. It incorporates fault tolerance by supporting horizontal scaling, allowing the system to remain scalable and resilient. If one service fails, the remaining services continue to operate normally, ensuring uninterrupted functionality across the system.'
-            image='/distributedSystem.jpeg'
-            hrefFile='DistributedSystem_Details.pdf'
-            hrefDownloadName='DistributedSystem_Details'
-            hrefText='Know More'
+            title="Online Enrollment System with Microservices Architecture"
+            number="02"
+            description="This system is implemented using multiple microservices distributed across several nodes (virtual machines) that are connected within the same network. It incorporates fault tolerance by supporting horizontal scaling, allowing the system to remain scalable and resilient. If one service fails, the remaining services continue to operate normally, ensuring uninterrupted functionality across the system."
+            image="/distributedSystem.jpeg"
+            hrefFile="DistributedSystem_Details.pdf"
+            hrefDownloadName="DistributedSystem_Details"
+            hrefText="Know More"
             reverse={false}
-            projectId='project2'
+            projectId="project2"
             projectRef={project2Ref}
             projectTags={projectTags[2]}
             setNavTitle={setNavTitle}
@@ -188,18 +188,18 @@ function App () {
 
         <div
           ref={project3Ref}
-          className='h-full min-w-full snap-center snap-always'
+          className="h-full min-w-full snap-center snap-always"
         >
           <Projects
-            number='03'
-            title='Network Media Upload Service'
-            description='This application simulates a multithreaded file transfer system within a local network using the producer-consumer model in C#. The producer component spawns n threads, each responsible for scanning a different folder for video files to send. Simultaneously, the consumer component also utilizes n threads to receive these video files from the producer and write them to the Desktop directory of the receiving machine. The system uses synchronization mechanisms and a task queue (regulated by a leaky bucket algorithm) to ensure smooth, thread-safe operations.'
-            image='/networkProducerConsumer.jpeg'
-            hrefFile='networkProducerConsumer_Details.pdf'
-            hrefDownloadName='networkProducerConsumer_Details'
-            hrefText='Know More'
+            number="03"
+            title="Network Media Upload Service"
+            description="This application simulates a multithreaded file transfer system within a local network using the producer-consumer model in C#. The producer component spawns n threads, each responsible for scanning a different folder for video files to send. Simultaneously, the consumer component also utilizes n threads to receive these video files from the producer and write them to the Desktop directory of the receiving machine. The system uses synchronization mechanisms and a task queue (regulated by a leaky bucket algorithm) to ensure smooth, thread-safe operations."
+            image="/networkProducerConsumer.jpeg"
+            hrefFile="networkProducerConsumer_Details.pdf"
+            hrefDownloadName="networkProducerConsumer_Details"
+            hrefText="Know More"
             reverse
-            projectId='project3'
+            projectId="project3"
             projectRef={project3Ref}
             projectTags={projectTags[3]}
             setNavTitle={setNavTitle}
@@ -212,18 +212,18 @@ function App () {
 
         <div
           ref={project4Ref}
-          className='h-full min-w-full snap-center snap-always'
+          className="h-full min-w-full snap-center snap-always"
         >
           <Projects
-            number='04'
-            title='Shuttle Reservation System'
-            description='This system aims to improve the existing scheduling process for the Arrows Express Shuttle, which currently relies solely on Google Forms, by introducing innovative features and a user-friendly profile system for easier access. Our goal is to provide a more comfortable and stress-free journey for all passengers by streamlining the booking experience and enhancing overall usability.'
-            image='/shuttleReservationBG.jpeg'
-            hrefFile='https://dlsu-shuttle.onrender.com/'
-            hrefDownloadName='DLSU Arrow Express'
-            hrefText='Try it out'
+            number="04"
+            title="Shuttle Reservation System"
+            description="This system aims to improve the existing scheduling process for the Arrows Express Shuttle, which currently relies solely on Google Forms, by introducing innovative features and a user-friendly profile system for easier access. Our goal is to provide a more comfortable and stress-free journey for all passengers by streamlining the booking experience and enhancing overall usability."
+            image="/shuttleReservationBG.jpeg"
+            hrefFile="https://dlsu-shuttle.onrender.com/"
+            hrefDownloadName="DLSU Arrow Express"
+            hrefText="Try it out"
             reverse={false}
-            projectId='project4'
+            projectId="project4"
             projectRef={project4Ref}
             projectTags={projectTags[4]}
             setNavTitle={setNavTitle}
@@ -236,18 +236,18 @@ function App () {
 
         <div
           ref={project5Ref}
-          className='h-full min-w-full snap-center snap-always'
+          className="h-full min-w-full snap-center snap-always"
         >
           <Projects
-            number='05'
-            title='PomoPet'
-            description='A productivity app that uses the Pomodoro technique with a virtual pet to boost focus, playing study-friendly music during sessions. The pet gains experience, and users can level it up by doing short exercises during breaks.'
-            image='/pomoPetBG.jpeg'
-            hrefFile='pomoPet_Details.pdf'
-            hrefDownloadName='PomoPet_Details'
-            hrefText='Know More'
+            number="05"
+            title="PomoPet"
+            description="A productivity app that uses the Pomodoro technique with a virtual pet to boost focus, playing study-friendly music during sessions. The pet gains experience, and users can level it up by doing short exercises during breaks."
+            image="/pomoPetBG.jpeg"
+            hrefFile="pomoPet_Details.pdf"
+            hrefDownloadName="PomoPet_Details"
+            hrefText="Know More"
             reverse
-            projectId='project5'
+            projectId="project5"
             projectRef={project5Ref}
             projectTags={projectTags[5]}
             setNavTitle={setNavTitle}
@@ -260,18 +260,18 @@ function App () {
 
         <div
           ref={project6Ref}
-          className='h-full min-w-full snap-center snap-always'
+          className="h-full min-w-full snap-center snap-always"
         >
           <Projects
-            number='06'
-            title='YouTuber Space'
-            description='A web-based platform designed to promote YouTubers and make it easier for their audience to discover, browse, and enjoy their content in one centralized space. The website integrates the YouTube Data API to fetch real-time information from creators’ channels, including their latest uploads, playlists, channel statistics, and more.'
-            image='/kadaCraftBG.jpeg'
-            hrefFile='https://kadacraft.onrender.com/'
-            hrefDownloadName='KadaCraft'
-            hrefText='Try it out'
+            number="06"
+            title="YouTuber Space"
+            description="A web-based platform designed to promote YouTubers and make it easier for their audience to discover, browse, and enjoy their content in one centralized space. The website integrates the YouTube Data API to fetch real-time information from creators’ channels, including their latest uploads, playlists, channel statistics, and more."
+            image="/kadaCraftBG.jpeg"
+            hrefFile="https://kadacraft.onrender.com/"
+            hrefDownloadName="KadaCraft"
+            hrefText="Try it out"
             reverse={false}
-            projectId='project6'
+            projectId="project6"
             projectRef={project6Ref}
             projectTags={projectTags[6]}
             setNavTitle={setNavTitle}
@@ -284,19 +284,20 @@ function App () {
       </div>
 
       {/* End Footer for Projects Section */}
-      <div className='sticky bg-[#F0F0F0] 3xs:h-[7%] lg:h-[5%]'>
+      <div className="sticky bg-[#F0F0F0] 3xs:h-[7%] lg:h-[5%]">
         <a
-          href='https://github.com/mauries-lopez'
-          target='_blank'
-          className='relative h-full cursor-pointer flex justify-center items-center opacity-60' rel='noreferrer'
+          href="https://github.com/mauries-lopez"
+          target="_blank"
+          className="relative h-full cursor-pointer flex justify-center items-center opacity-60"
+          rel="noreferrer"
         >
-          <div className='relative lg:h-[50%] lg:w-auto 3xs:h-full 3xs:w-full pl-2 pr-2 flex flex-row justify-center items-center bg-[#1A1A1A] animate-pulse lg:rounded-full'>
-            <GitHubLight name='github' className='relative h-[60%]' />
-            <p className='relative justify-center text-white text-center font-sans font-bold pl-2 pr-2 text-[11px]'>
-              {' '}
-              Check out more on my GitHub!{' '}
+          <div className="relative lg:h-[50%] lg:w-auto 3xs:h-full 3xs:w-full pl-2 pr-2 flex flex-row justify-center items-center bg-[#1A1A1A] animate-pulse lg:rounded-full">
+            <GitHubLight name="github" className="relative h-[60%]" />
+            <p className="relative justify-center text-white text-center font-sans font-bold pl-2 pr-2 text-[11px]">
+              {" "}
+              Check out more on my GitHub!{" "}
             </p>
-            <GitHubLight name='github' className='relative h-[60%]' />
+            <GitHubLight name="github" className="relative h-[60%]" />
           </div>
         </a>
       </div>
@@ -315,7 +316,7 @@ function App () {
       }
       */}
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
