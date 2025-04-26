@@ -187,7 +187,7 @@ function App() {
         setNavSocialColor={setNavSocialColor}
       />
 
-      <div className="relative w-full">
+      <div id="experiences" className="relative w-full">
         <Experience
           id = {"experience-0"}
           title = {"Research Assistant"}
@@ -270,7 +270,7 @@ function App() {
         />
       </div>
       
-      <div className="relative flex 3xs:flex-row md:flex-col 3xs:snap-x md:snap-none 3xs:snap-mandatory md:overflow-x-hidden 3xs:overflow-x-auto md:whitespace-normal 3xs:whitespace-break-spaces">
+      <div id="projects" className="relative flex 3xs:flex-row md:flex-col 3xs:snap-x md:snap-none 3xs:snap-mandatory md:overflow-x-hidden 3xs:overflow-x-auto md:whitespace-normal 3xs:whitespace-break-spaces">
         <div className="h-full w-full snap-center snap-always ">
           <Projects
             number="00"
@@ -438,14 +438,14 @@ function App() {
       </div>
 
       {/* End Footer for Projects Section */}
-      <div className="sticky bg-[#F0F0F0] 3xs:h-[7%] lg:h-[5%]">
+      <div id="githubFooter" className="relative bg-[#F0F0F0] 3xs:h-[7%] md:h-[5%]">
         <a
           href="https://github.com/mauries-lopez"
           target="_blank"
           className="relative h-full cursor-pointer flex justify-center items-center opacity-60"
           rel="noreferrer"
         >
-          <div className="relative lg:h-[50%] lg:w-auto 3xs:h-full 3xs:w-full pl-2 pr-2 flex flex-row justify-center items-center bg-[#1A1A1A] animate-pulse lg:rounded-full">
+          <div className="relative md:h-[50%] md:w-auto 3xs:h-full 3xs:w-full pl-2 pr-2 flex flex-row justify-center items-center bg-[#1A1A1A] animate-pulse md:rounded-full">
             <GitHubLight name="github" className="relative h-[60%]" />
             <p className="relative justify-center text-white text-center font-sans font-bold pl-2 pr-2 text-[11px]">
               {" "}

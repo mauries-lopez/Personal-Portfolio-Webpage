@@ -12,6 +12,15 @@
       ]
     }
   ],
-  "dictionaries": ["custom"],
-  "ignorePaths": ["node_modules/**/*", "*.min.js", "*.css"]
+  "dictionaries": [
+    "custom"
+  ],
+  "ignorePaths": [
+    "node_modules/**/*",
+    "*.min.js",
+    "*.css"
+  ],
+  "words": [
+    "Mapúa"
+  ]
 }
