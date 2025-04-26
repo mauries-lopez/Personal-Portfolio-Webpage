@@ -71,7 +71,7 @@ export const MobileMenu = ({
               </Link>
 
               <Link
-                to="experience"
+                to="experience-0"
                 spy
                 smooth
                 offset={window.innerWidth < 640 ? -50 : -80}
@@ -94,19 +94,6 @@ export const MobileMenu = ({
                 }}
               >
                 <li className="hover:underline cursor-pointer"> Projects </li>
-              </Link>
-
-              <Link
-                to="tech-stack"
-                spy
-                smooth
-                offset={0}
-                duration={800}
-                onClick={() => {
-                  handleHamburgerClick();
-                }}
-              >
-                <li className="hover:underline cursor-pointer"> Tech Stack </li>
               </Link>
 
               <Link

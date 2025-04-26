@@ -13,5 +13,14 @@
     }
   ],
   "dictionaries": ["custom"],
-  "ignorePaths": ["node_modules/**/*", "*.min.js", "*.css"]
+  "ignorePaths": ["node_modules/**/*", "*.min.js", "*.css"],
+  "words": [
+    "Bisaya",
+    "Filbis",
+    "kada",
+    "Mapúa",
+    "Pomo",
+    "Pomodoro",
+    "Responbilities"
+  ]
 }

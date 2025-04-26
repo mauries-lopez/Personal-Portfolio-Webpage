@@ -30,7 +30,7 @@ export const Projects = ({
   };
 
   const { ref, inView } = useInView({
-    threshold: 0.9,
+    threshold: 0.8,
   });
 
   const setProjectNode = useCallback(
