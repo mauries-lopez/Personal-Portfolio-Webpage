@@ -24,7 +24,7 @@ export const About = ({
   const [educationDivBtnDisplay, setEducationDivBtnDisplay] = useState("block");
   const [educationDisplay, setEducationDisplay] = useState("hidden");
 
-  const [techStackDivName, setTechStackDivName] = useState("+ Tech Stack");
+  const [techStackDivName, setTechStackDivName] = useState("- Skills / Tech Stack");
   const [techStackDivBtnDisplay, setTechStackDivBtnDisplay] = useState("block");
   const [techStackDisplay, setTechStackDisplay] = useState("hidden");
 
