@@ -5,9 +5,8 @@ import { NavigationBar } from "./components/NavigationBar";
 import { MobileMenu } from "./components/MobileMenu";
 import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
-// import { TechStack } from './components/sections/TechStack'
 import { Experience } from "./components/sections/Experience";
-// import { Contact } from './components/sections/Contact'
+import { Contact } from './components/sections/Contact'
 import Lenis from "lenis";
 import { GitHubLight } from "developer-icons";
 import { useInView } from "react-intersection-observer";
@@ -155,9 +154,9 @@ function App() {
   }, []);
 
   return (
-    <div className={`h-svh w-svw ${isLoaded ? "" : "overflow-hidden"}`}>
+    <div className={`h-svh w-svw`}>
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
-
+      
       <NavigationBar
         setCurHamburgerStatus={setCurHamburgerStatus}
         overflowStatus={overflowStatus}
@@ -456,19 +455,15 @@ function App() {
         </a>
       </div>
 
-      {/*
-      {
-        <TechStack
-          setNavTitle = {setNavTitle}
-        />
-      }
-
-      {
-        <Contact
-          setNavTitle = {setNavTitle}
-        />
-      }
-      */}
+      <Contact
+        setNavTitle = {setNavTitle}
+        setAnimateAboutBGClass={setAnimateAboutBGClass}
+        setNavTitleColor={setNavTitleColor}
+        setNavBarColor={setNavBarColor}
+        setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+        setNavSocialColor={setNavSocialColor}
+      />
+      
     </div>
   );
 }
