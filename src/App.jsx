@@ -10,6 +10,7 @@ import { Contact } from './components/sections/Contact'
 import Lenis from "lenis";
 import { GitHubLight } from "developer-icons";
 import { useInView } from "react-intersection-observer";
+import { Footer } from "./components/sections/Footer";
 
 function App() {
   // Hamburger Button / Main Menu
@@ -463,6 +464,8 @@ function App() {
         setNavMainMenuBtnColor={setNavMainMenuBtnColor}
         setNavSocialColor={setNavSocialColor}
       />
+
+      <Footer/>
       
     </div>
   );
