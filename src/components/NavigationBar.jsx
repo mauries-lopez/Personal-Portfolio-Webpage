@@ -1,7 +1,8 @@
 import socialMediaLogo from "../assets/socialMediaLogo.svg";
 import { useEffect, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { LinkedIn, GitHubLight } from "developer-icons";
+import { LinkedIn, GitHubLight, Gmail } from "developer-icons";
+import { Link } from "react-scroll";
 
 export const NavigationBar = ({
   setCurHamburgerStatus,
@@ -91,7 +92,7 @@ export const NavigationBar = ({
               target="_blank"
               rel="noreferrer"
             >
-              <LinkedIn className="size-10 mb-3 hover:scale-120 duration-300 cursor-pointer" />
+              <LinkedIn className="size-10 mt-10 mb-3 hover:scale-120 duration-300 cursor-pointer" />
             </a>
             <a
               href="https://github.com/mauries-lopez"
@@ -99,9 +100,17 @@ export const NavigationBar = ({
               rel="noreferrer"
             >
               <GitHubLight
-                className={`${navSocialColor} size-10 hover:scale-120 duration-300 cursor-pointer`}
+                className={`${navSocialColor} size-10 mb-3 hover:scale-120 duration-300 cursor-pointer`}
               />
             </a>
+            <Link
+              to="contact"
+              smooth={true}
+            >
+              <Gmail
+                className={`size-10 hover:scale-120 duration-300 cursor-pointer`}
+              />
+            </Link>
           </div>
         </div>
       </div>
