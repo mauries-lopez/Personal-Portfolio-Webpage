@@ -23,8 +23,8 @@ export const About = ({
   const [educationDivName, setEducationDivName] = useState("+ Education");
   const [educationDivBtnDisplay, setEducationDivBtnDisplay] = useState("block");
   const [educationDisplay, setEducationDisplay] = useState("hidden");
-
-  const [techStackDivName, setTechStackDivName] = useState("- Skills / Tech Stack");
+  
+  const [techStackDivName, setTechStackDivName] = useState("+ Skills");
   const [techStackDivBtnDisplay, setTechStackDivBtnDisplay] = useState("block");
   const [techStackDisplay, setTechStackDisplay] = useState("hidden");
 
@@ -130,10 +130,10 @@ export const About = ({
       setEducationDisplay("hidden")
 
       setTechStackDisplay("block");
-      setTechStackDivName("- Skills / Tech Stack");
+      setTechStackDivName("- Skills");
     } else {
       setTechStackDisplay("hidden");
-      setTechStackDivName("+ Skills / Tech Stack");
+      setTechStackDivName("+ Skills");
 
       setIntroductionDivBtnDisplay("block");
       setResearchInterestDivBtnDisplay("block");
