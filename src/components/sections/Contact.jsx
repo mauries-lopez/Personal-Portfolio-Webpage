@@ -10,10 +10,6 @@ export const Contact = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleColor,
   useEffect(() => {
     if (inView) {
       // Recolor (default)
-      setNavTitleColor("text-[#F0F0F0]");
-      setNavBarColor("#1A1A1A");
-      setNavMainMenuBtnColor("bg-[#F0F0F0]");
-      setNavSocialColor("");
       setNavTitle("05 Contact");
     }
   }, [
