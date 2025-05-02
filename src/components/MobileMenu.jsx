@@ -99,6 +99,19 @@ export const MobileMenu = ({
               </Link>
 
               <Link
+                to="testimonial"
+                spy
+                smooth
+                offset={window.innerWidth < 640 ? 0 : -70}
+                duration={800}
+                onClick={() => {
+                  handleHamburgerClick();
+                }}
+              >
+                <li className="hover:underline cursor-pointer"> Testimonial </li>
+              </Link>
+
+              <Link
                 to="contact"
                 spy
                 smooth

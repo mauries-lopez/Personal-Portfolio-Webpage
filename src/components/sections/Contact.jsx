@@ -47,7 +47,6 @@ export const Contact = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleColor,
       id="contact"
       ref={ref}
       className="relative h-svh w-dvw top-0 flex justify-center items-center bg-fixed"
-      style={{ backgroundImage: "url(/mainMenuBG_Invert_minimal.png)" }}
     >
       <div className="relative h-[70%] w-[80%] flex flex-col pl-3 pr-3">
         <p className="font-sans font-bold text-3xl text-[#F0F0F0] pb-5">
