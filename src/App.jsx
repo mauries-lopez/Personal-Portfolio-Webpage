@@ -11,6 +11,7 @@ import Lenis from "lenis";
 import { GitHubLight } from "developer-icons";
 import { useInView } from "react-intersection-observer";
 import { Footer } from "./components/sections/Footer";
+import { Testimonial } from "./components/sections/Testimonial";
 
 function App() {
   // Hamburger Button / Main Menu
@@ -445,7 +446,7 @@ function App() {
           className="relative h-full cursor-pointer flex justify-center items-center opacity-60"
           rel="noreferrer"
         >
-          <div className="relative md:h-[50%] md:w-auto 3xs:h-full 3xs:w-full pl-2 pr-2 flex flex-row justify-center items-center bg-[#1A1A1A] animate-pulse md:rounded-full">
+          <div className="relative md:h-[50%] md:w-auto 3xs:h-full 3xs:w-full pl-2 pr-2 flex flex-row justify-center items-center bg-[#1A1A1A] md:rounded-full">
             <GitHubLight name="github" className="relative h-[60%]" />
             <p className="relative justify-center text-white text-center font-sans font-bold pl-2 pr-2 text-[11px]">
               {" "}
@@ -456,14 +457,29 @@ function App() {
         </a>
       </div>
 
-      <Contact
-        setNavTitle = {setNavTitle}
-        setAnimateAboutBGClass={setAnimateAboutBGClass}
-        setNavTitleColor={setNavTitleColor}
-        setNavBarColor={setNavBarColor}
-        setNavMainMenuBtnColor={setNavMainMenuBtnColor}
-        setNavSocialColor={setNavSocialColor}
-      />
+      <div
+        className="relative w-svw bg-fixed bg-cover bg-no-repeat"
+        style={{ backgroundImage: "url(/mainMenuBG_Invert_minimal.png)" }}
+      >
+        <Testimonial
+          setNavTitle = {setNavTitle}
+          setAnimateAboutBGClass={setAnimateAboutBGClass}
+          setNavTitleColor={setNavTitleColor}
+          setNavBarColor={setNavBarColor}
+          setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+          setNavSocialColor={setNavSocialColor}      
+        />
+
+        <Contact
+          setNavTitle = {setNavTitle}
+          setAnimateAboutBGClass={setAnimateAboutBGClass}
+          setNavTitleColor={setNavTitleColor}
+          setNavBarColor={setNavBarColor}
+          setNavMainMenuBtnColor={setNavMainMenuBtnColor}
+          setNavSocialColor={setNavSocialColor}
+        />
+      </div>
+      
 
       <Footer/>
       

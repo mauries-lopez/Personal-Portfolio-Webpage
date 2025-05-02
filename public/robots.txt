@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maurieslopez.netlify.app/sitemap.xml

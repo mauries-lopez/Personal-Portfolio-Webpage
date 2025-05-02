@@ -15,8 +15,10 @@
   "dictionaries": ["custom"],
   "ignorePaths": ["node_modules/**/*", "*.min.js", "*.css"],
   "words": [
+    "Azcarraga",
     "Bisaya",
     "Filbis",
+    "googleb",
     "kada",
     "Mapúa",
     "Pomo",
