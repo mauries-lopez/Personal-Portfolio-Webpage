@@ -14,7 +14,7 @@ export const Contact = ({ setNavTitle, setAnimateAboutBGClass, setNavTitleColor,
       setNavBarColor("#1A1A1A");
       setNavMainMenuBtnColor("bg-[#F0F0F0]");
       setNavSocialColor("");
-      setNavTitle("04 Contact");
+      setNavTitle("05 Contact");
     }
   }, [
     inView,
